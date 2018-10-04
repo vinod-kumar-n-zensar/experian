@@ -1,4 +1,5 @@
 
+@import 'variables.scss';
 // Global CSS here
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,4 +50,31 @@ body{
 .container{
     max-width: 1600px;
     margin: auto;
+}
+.dis-flex{
+    display: flex;
+}
+//Account Summary 
+.acct-nav-tabs{
+    ul{
+        height: 50px;
+        li{
+			display: inline-block; 
+			a{
+				font-size: 14px;
+				color: $icon-color;
+				text-decoration: none;
+				border-bottom: 2px solid transparent;
+			}
+		}
+		li.active{
+			a{
+				color: $font-primary-color;
+				border-bottom: 2px solid $tab-heading-color;
+			}
+		}
+    }
+
+    
+
 }

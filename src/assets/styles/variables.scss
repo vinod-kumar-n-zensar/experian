@@ -1,0 +1,8 @@
+$icon-color: #426da9;
+$font-primary-color: #333333;
+$tab-heading-color: #6d2077;
+
+//mixins
+@mixin padding-mixin($number) {
+    padding: $number;
+  }

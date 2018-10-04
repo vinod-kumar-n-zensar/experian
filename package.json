@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "css-loader": "^1.0.0",
+    "material-icons": "^0.2.3",
     "node-sass": "^4.9.3",
     "roboto-fontface": "^0.10.0",
     "sass": "^1.14.1",

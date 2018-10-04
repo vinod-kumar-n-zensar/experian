@@ -67,8 +67,8 @@ module.exports = {
     new HtmlWebpackPlugin({
         hash: true,
         title: 'Experia',
-      filename: 'about.html',
-      template: 'about.html',
+      filename: 'acct-summary.html',
+      template: 'acct-summary.html',
       inject: false
     }),
   ]
