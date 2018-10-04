@@ -28,14 +28,26 @@ module.exports = {
             test: /\.(css|scss)?$/,
             use: ['style-loader','css-loader','sass-loader' ]
           },
+         {
+            test: /\.html$/,
+            use: [ {
+              loader: 'html-loader',
+              options: {
+                minimize: true
+              }
+            }],
+         }
       ]
   },
   devtool: '#inline-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/pages/main.html',
-      inject: 'body'
+        hash: true,
+        title: 'Experia',
+      filename: 'index.html',
+      template: 'index.html',
+      inject: false
     }),
   ]
 }
