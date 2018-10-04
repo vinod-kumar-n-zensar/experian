@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     mode: 'development',
-  entry: './src/scripts/index',
+  entry: './src/assets/scripts/index',
   devServer: {
       port: "9000",
     hot: true,
@@ -25,6 +25,10 @@ module.exports = {
   module: {
       rules:[
         {
+            test: /\.(jpe?g|png|gif|svg)$/i, 
+            loader: "file-loader?name=/src/assets/images/[name].[ext]"
+        },
+        {
             test: /\.(css|scss)?$/,
             use: ['style-loader','css-loader','sass-loader' ]
           },
@@ -32,11 +36,22 @@ module.exports = {
             test: /\.html$/,
             use: [ {
               loader: 'html-loader',
+              
               options: {
-                minimize: true
+                interpolate: true
               }
             }],
-         }
+         },
+         {
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/'
+                }
+            }]
+        }
       ]
   },
   devtool: '#inline-source-map',
@@ -47,6 +62,13 @@ module.exports = {
         title: 'Experia',
       filename: 'index.html',
       template: 'index.html',
+      inject: false
+    }),
+    new HtmlWebpackPlugin({
+        hash: true,
+        title: 'Experia',
+      filename: 'about.html',
+      template: 'about.html',
       inject: false
     }),
   ]
