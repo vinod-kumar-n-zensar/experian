@@ -1,0 +1,131 @@
+@import "../styles/app.scss";
+.caselist{
+	&__cont{
+		width: 77%;
+    	margin: 0 auto;
+	}
+	&__heading{
+		@include fontStyling($family: 'Roboto-Regular', $size: 20px, $color: $blackColor);
+	}
+	&__case{
+		margin: 25px 25px 25px 0;
+		border-radius: 4px;
+		border: solid 1px $lightGreyColor;
+		float: left;
+		width: 23%;
+		max-width: 300px;
+		position: relative;
+	}
+	&__box{
+		background-color: $whiteLightColor;
+		padding: 15px;
+		float: left;
+		width: 87.4%;
+		max-width: 270px;
+		position: relative;
+		border-radius: 4px 4px 0 0;
+	}
+	&__name{
+		@include fontStyling($family: 'Roboto-Medium', $size: 15px, $color: $blackColor);
+	}
+	&__number{
+		@include fontStyling($family: 'Roboto-Regular', $size: 14px, $color: $blackColor);
+	}
+	&__link{
+		@include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $blueColor);
+		margin-top: 10px;
+		float: left;
+	}
+	&__goicon{
+		margin-left: 5px;
+	    width: 9px;
+	    height: 14px;
+	    float: right;
+	}
+	&__balance{
+		padding: 5px 0 0;
+	}
+	&__label{
+		line-height: 1.15;
+  		@include fontStyling($family: 'Roboto-Bold', $size: 13px, $color: $blackGreyColor);
+	}
+	&__value{
+		@include fontStyling($family: 'Roboto-Regular', $size: 13px, $color: $blackGreyColor);
+		float: right;
+	}
+	&__info{
+		padding: 10px 0 10px 15px;
+		float: left;
+	    width: 94%;
+		max-width: 285px;
+		min-height: 110px;
+	}
+	&__infoname{
+		@include fontStyling($family: 'Roboto-Regular', $size: 13px, $color: $barneyColor);
+		line-height: 1.15;
+	}
+	&__infotime{
+		@include fontStyling($family: 'Roboto-Medium', $size: 12px, $color: $brownGreyColor);
+		text-transform: uppercase;
+	    margin-top: 5px;
+	    float: left;
+	}
+	&__user{
+		width: 80%;
+		float: right;
+	    padding: 10px 0 0;
+    	margin-top: 40px;
+		border-top: solid 1px $veryLightPink;
+		@include fontStyling($family: 'Roboto-Regular', $size: 13px, $color: $blackGreyColor);
+		position: absolute;
+	    right: 0;
+	    bottom: 10px;
+	}
+	&__profileicon{
+	    width: 100px;
+	    height: 100px;
+	    opacity: 0.3;
+	    position: absolute;
+	    right: -15px;
+	    top: -13px;
+	}
+	&--nobg{
+		border-bottom: solid 1px $veryLightPink;
+		background: $whiteColor;
+	}
+	&__usericon{
+		width: 14px;
+  		height: 14px;
+  		margin-right: 5px;
+  		float: left;
+	}
+	&__fileicon{
+		width: 15px;
+  		height: 30px;
+  		float: left;
+  		margin-right: 5px;
+	}
+	&__diverticon{
+		width: 18px;
+  		height: 30px;
+  		float: left;
+  		margin-right: 5px;
+	}
+	&__foldericon{
+		width: 18px;
+  		height: 30px;
+  		float: left;
+  		margin-right: 5px;
+	}
+	&__boldtext{
+		@include fontStyling($family: 'Roboto-Bold', $size: 13px, $color: $barneyColor);
+	}
+	&__secondline{
+		@include fontStyling($family: 'Roboto-Regular', $size: 13px, $color: $barneyColor);
+		text-overflow: ellipsis;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    width: 88%;
+	    float: left;
+	}
+}

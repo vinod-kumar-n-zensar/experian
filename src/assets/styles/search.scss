@@ -1,0 +1,62 @@
+@import "../styles/app.scss";
+.search{
+	&__innercont{
+	    width: 77%;
+    	margin: 35px auto 0 auto;
+	}
+	&__heading{
+		@include fontStyling($family: 'Roboto-Regular', $size: 15px, $color: $blackColor);
+		line-height: 1.33;
+	}
+	&__callstats{
+		float: left;
+		width: 100px;
+	    margin: 40px 35px 30px;
+	    text-align: center;
+	}
+	&__statcount{
+		@include fontStyling($family: 'Roboto-Medium', $size: 64px, $color: $statsColor);
+	  	text-align: center;
+	  	position: relative;
+	}
+	&__statdesc{
+		@include fontStyling($family: 'Roboto-Regular', $size: 12px, $color: $statsDescColor);
+		text-transform: uppercase;
+		margin-top: 10px;
+		text-align: center;
+    	width: 100%;
+	}
+	&__percentage{
+		@include fontStyling($family: 'Roboto-Bold', $size: 18px, $color: $blackGreyColor);
+		line-height: 0.83;
+		position: absolute;
+	    bottom: 10px;
+	    right: 0px;
+	}
+	&--collected{
+		margin: 40px 10px 30px;
+    	width: 150px;
+	}
+	&__bycont{
+		width: 100%;
+		border-radius: 4px;
+	  	background-color: $whiteLightColor;
+	  	border: solid 1px $lightGreyColor;
+	  	float: left;
+    	padding: 20px 0;
+    	margin-bottom: 40px;
+	}
+	&__form{
+		width: 70%;
+		margin: 0 auto;
+	}
+	&__input{
+		background-color: $whiteColor;
+	  	border: solid 1px $brownGreyColor;
+	  	border-radius: 4px;
+	  	@include fontStyling($family: 'Roboto-Regular', $size: 16px, $color: $lightFontColor);
+	  	padding: 5px 0px 5px 10px;
+		margin-right: 10px;
+		width: 24%;
+	}
+}

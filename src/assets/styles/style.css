@@ -1,0 +1,68 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+body { background: #fff; max-width: 1680px; margin: 0 auto; }
+.header { border-bottom: solid 2px #ba2f7d; padding: 10px 0 0 0; float: left; width: 100%;}
+.header__logolink {background: url(../images/experian__logo.png) no-repeat center center transparent; background-size: 100%; }
+.header__searchicon{
+	background: url(../images/search__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.header__nexticon{
+	background: url(../images/loadnext__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.header__caselisticon{
+	background: url(../images/caselist__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.header__menuicon{
+	background: url(../images/menu__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.header__helpicon{
+	background: url(../images/help__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.header__messageicon{
+	background: url(../images/message__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.header__notificationicon{
+	background: url(../images/notification__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.search{
+	float: left;
+    width: 100%;
+}
+.caselist__goicon{
+	background: url(../images/next__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.caselist__profileicon{
+	background: url(../images/profile__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.caselist__usericon{
+	background: url(../images/user__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.caselist__fileicon{
+	background: url(../images/file__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.caselist__diverticon{
+	background: url(../images/divert__icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
+.caselist__foldericon{
+	background: url(../images/userfolder_icon.png) no-repeat center center transparent; 
+	background-size: 100%;
+}
