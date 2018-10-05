@@ -1,8 +1,40 @@
-<section class="acct-nav-tabs container dis-flex">
-    <nav>
-        <ul>
-            <li class="active"><a href="">A1000056</a></li>
-            <li><a href="">A1000056</a></li>
-        </ul>
-    </nav>
+<section class="container">
+<pcc-eds-secondary-header class="eds container">
+    <div class="header-container style-scope pcc-eds-secondary-header">
+        <div class="icon-container style-scope pcc-eds-secondary-header">
+            <eds-icon icon="home" class="s16 home-icon eds style-scope pcc-eds-secondary-header" library="material-icon-font"><i
+                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">home</i></eds-icon>
+        </div>
+
+        <div class="tabs-container style-scope pcc-eds-secondary-header">
+            <pcc-eds-secondary-header-tab class="eds style-scope pcc-eds-secondary-header" person="James Brown"
+                data-index="0" active="undefined">
+                <div class="info-container">
+                    <eds-icon icon="person" class="s16 eds" library="material-icon-font"><i class="api-icon-element material-icons style-scope eds-icon"
+                            style="transform: scale(1.35);">person</i></eds-icon>
+                    <div class="person-name">James Brown</div>
+                </div>
+                <div class="tab-controls">
+                    <!-- <eds-icon icon='query_builder' class='s16'></eds-icon>
+    <div class="time">00:00</div>
+    <eds-icon icon='phone' class='s16'></eds-icon> -->
+                    <!-- <eds-button motif='tertiary' icon='close' class='icon-only'></eds-button> -->
+                    <eds-icon icon="close" class="close-button s16 eds" library="material-icon-font"><i class="api-icon-element material-icons style-scope eds-icon"
+                            style="transform: scale(1.35);">close</i></eds-icon>
+                </div>
+            </pcc-eds-secondary-header-tab>
+        </div>
+    </div>
+</pcc-eds-secondary-header>
+
+<eds-tabs class="eds"><ul class="tab-labels style-scope eds-tabs" role="tablist"><li role="presentation" class="style-scope eds-tabs"><a id="tab-0" aria-controls="tab-panel-0" aria-selected="true" href="#tab-panel-0" role="tab" class="style-scope eds-tabs">Person Overview</a></li><li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="tab-panel-1" aria-selected="false" href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Profile</a></li></ul>
+    <eds-tab label="Person Overview" active="true" class="eds" aria-hidden="false" id="tab-panel-0" aria-labelledby="tab-0" role="tabpanel">
+        
+    </eds-tab>
+    <eds-tab label="Profile" class="eds" id="tab-panel-1" aria-labelledby="tab-1" aria-hidden="true" role="tabpanel">
+        <div class="containerFlex">
+        <div>Profile content...</div>
+        </div>
+    </eds-tab>
+</eds-tabs>
 </section>
