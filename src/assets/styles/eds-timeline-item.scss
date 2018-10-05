@@ -32,11 +32,11 @@ pcc-eds-timeline-item {
 			background-color: $background_color_1;
 			border-radius: 50%;
 			color: $color_2;
-			height: 46px;
-			line-height: 46px;
-			margin-left: -23px;
+			height: 40px;
+			line-height: 42px;
+			margin-left: -20px;
 			padding-left: 5px;
-			width: 46px;
+			width: 40px;
 		}
 	}
 	.section-main {
@@ -49,5 +49,10 @@ pcc-eds-timeline-item {
 		.placeholder-right {
 			flex: 1;
 		}
+	}
+}
+pcc-eds-timeline-item:last-child{
+	.section-icon{
+		border-left:0;
 	}
 }
