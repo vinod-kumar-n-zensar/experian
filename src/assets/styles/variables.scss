@@ -20,3 +20,32 @@ $background_color_4: white;
 @mixin padding-mixin($number) {
     padding: $number;
   }
+  
+@mixin fontStyling($family, $size, $color) {
+  font-size: $size;
+  font-family: $family;
+ font-weight: normal;
+ color: $color;
+}
+@mixin headerIcons($width, $height){
+width: $width;
+height: $height;
+float: left;
+}
+
+$blackColor: #000000;
+$statsColor: #4e4e4e;
+$statsDescColor: #7a7a7a;
+$blackGreyColor: #333333;
+$lightGreyColor: #cccccc;
+$lightPinkColor: #dcdcdc;
+$frenchBlue: #426da9;
+$countColor: #e20000;
+$whiteColor: #ffffff;
+$whiteLightColor: #f6f6f6;
+$brownGreyColor: #888888;
+$lightFontColor: #aaaaaa;
+$btnBorder: #004590;
+$veryLightPink: #dcdcdc;
+$blueColor: #006dbd;
+$barneyColor: #af1685;

@@ -30,9 +30,15 @@ eds-icon {
 		font-size: inherit;
 	}
 }
-eds-icon.s18 {
+eds-icon.s16 {
 	>* {
 		font-size: 16px;
+		vertical-align: bottom;
+	}
+}
+eds-icon.s18 {
+	>* {
+		font-size: 18px;
 		vertical-align: bottom;
 	}
 }

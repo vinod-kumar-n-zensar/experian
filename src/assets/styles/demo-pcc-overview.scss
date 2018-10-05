@@ -4,7 +4,12 @@ $background_color_2: rgb(245, 245, 245);
 $background_color_3: #0e6eb7;
 $background_color_4: #f6f6f6;
 $border-color:#d8d8d8;
+$filter-bgcolor: #d2e8f9;
+$switch-color: #888888;
 
+.text-Cap{
+	text-transform: capitalize;
+}
 .marginBtm20{
 	margin-bottom: 20px;
 }
@@ -159,4 +164,94 @@ eds-option {
 [slot="slot-header-center"]{
 	border-bottom:1px solid $border-color;
 	padding-bottom: 8px;
+}
+
+.form-switch {
+	display: inline-block;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+  }
+  
+  .form-switch i {
+	position: relative;
+	display: inline-block;
+   margin-right: .5rem;
+	width: 46px;
+	height: 26px;
+	background-color: $switch-color;
+	border-radius: 23px;
+	vertical-align: text-bottom;
+	transition: all 0.3s linear;
+	top:5px;
+	margin-left: 5px;
+  }
+  
+  .form-switch i::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 42px;
+	height: 22px;
+	background-color:$background_color_1;
+	border-radius: 11px;
+	transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+	transition: all 0.25s linear;
+  }
+  
+  .form-switch i::after {
+	content: "";
+    position: absolute;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color:$switch-color;
+    border-radius: 11px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+    transform: translate3d(2px, 2px, 0);
+    transition: all 0.2s ease-in-out;
+    top: 3px;
+  }
+  
+  .form-switch:active i::after {
+	width: 28px;
+	transform: translate3d(2px, 2px, 0);
+  }
+  
+  .form-switch:active input:checked + i::after { transform: translate3d(16px, 2px, 0); }
+  
+  .form-switch input { display: none; }
+  
+  .form-switch input:checked + i { background-color: #4BD763; }
+  
+  .form-switch input:checked + i::before { transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0); }
+  
+  .form-switch input:checked + i::after { transform: translate3d(22px, 2px, 0); }
+
+  .sort-filter{
+	  background: $filter-bgcolor;
+	  display: flex;
+	  align-items: baseline;
+	  flex: 5;
+	  padding: 5px 15px;
+	  eds-dropdown{
+		  margin: 0;
+	  }
+	  label{
+		vertical-align: super;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	>div{
+		flex: 1
+	}
+	>div:first-child{
+		text-align:right;
+		margin-right: 10px;
+	}
+	>div:last-child{
+		text-align:right;
+	}
+  }
+  .acct-container  .sort-filter eds-dropdown{
+	min-width:150px;
 }

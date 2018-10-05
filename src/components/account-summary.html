@@ -1,4 +1,4 @@
-<section class="container acct-container">
+<section class="container acct-container clear">
         ${require('./pcc-secondary-header.html')}  
 
     <eds-tabs class="eds">
@@ -173,32 +173,7 @@
 
                 </div>
                 <div class="containerSide">
-                    <eds-tabs background="gray" class="eds">
-                        <ul class="tab-labels style-scope eds-tabs" role="tablist">
-                            <li role="presentation" class="style-scope eds-tabs"><a id="tab-0" aria-controls="tab-panel-0"
-                                    aria-selected="true" href="#tab-panel-0" role="tab" class="style-scope eds-tabs">Alerts</a></li>
-                            <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="tab-panel-1"
-                                    aria-selected="false" href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Activities</a></li>
-                        </ul>
-                        <eds-tab label="Alerts" class="eds" aria-hidden="true" id="tab-panel-0" aria-labelledby="tab-0"
-                            role="tabpanel">
-                            <p>
-                                <eds-alert motif="error" background="white" class="eds">
-                                    <div class="eds-alert-sidebar style-scope eds-alert"></div>
-                                    <div class="eds-alert-close-icon style-scope eds-alert">×</div>
-                                    <div class="eds-alert-content style-scope eds-alert">
-                                        This is an example of an alert note
-                                    </div>
-                                </eds-alert>
-                            </p>
-                        </eds-tab>
-                        <eds-tab label="Activities" class="eds" id="tab-panel-1" aria-labelledby="tab-1" aria-hidden="true"
-                            role="tabpanel">
-                            <p>
-                                Activities content...
-                            </p>
-                        </eds-tab>
-                    </eds-tabs>
+                        ${require('./activites.html')}
                 </div>
             </div>
         </eds-tab>

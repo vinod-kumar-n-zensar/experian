@@ -50,6 +50,17 @@ pcc-eds-timeline-item {
 			flex: 1;
 		}
 	}
+	[slot="slot-header-center"]{
+		display: flex;
+		flex: 5;
+		[slot="slot-header-left"]{
+			flex: 4;
+		}
+		[slot="slot-header-right"]{
+			flex: 1;
+			font-size: 14px;
+		}
+	}
 }
 pcc-eds-timeline-item:last-child{
 	.section-icon{
