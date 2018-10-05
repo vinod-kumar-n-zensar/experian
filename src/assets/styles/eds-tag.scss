@@ -1,0 +1,33 @@
+$color_1: #333333;
+$color_2: #e4002b;
+$color_3: #b35900;
+$color_4: #007A3B;
+
+eds-tag {
+	display: inline-block;
+	padding: 4px 10px;
+	font-size: 14px;
+	border-radius: 12px;
+	margin-left: 2px;
+	line-height: 1 !important;
+	&:not([motif]) {
+		background: #e6e6e6;
+		color: $color_1;
+	}
+}
+eds-tag[motif="default"] {
+	background: #e6e6e6;
+	color: $color_1;
+}
+eds-tag[motif='error'] {
+	background: #ffdce2;
+	color: $color_2;
+}
+eds-tag[motif='warning'] {
+	background: #fceeba;
+	color: $color_3;
+}
+eds-tag[motif='success'] {
+	background: #cdf4d2;
+	color: $color_4;
+}
