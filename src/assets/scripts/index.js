@@ -16,4 +16,5 @@ import '../styles/eds-icon.scss';
 import '../styles/eds-timeline-item.scss'
 import '../styles/eds-tag.scss'
 import '../styles/activities.scss'
+import '../styles/contact-details.scss'
 

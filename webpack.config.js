@@ -71,5 +71,12 @@ module.exports = {
       template: 'acct-summary.html',
       inject: false
     }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      title: 'Experia',
+    filename: 'contact-details.html',
+    template: 'contact-details.html',
+    inject: false
+  }),
   ]
 }

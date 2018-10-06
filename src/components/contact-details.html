@@ -1,0 +1,149 @@
+<section class="container acct-container clear">
+        ${require('./pcc-secondary-header.html')}  
+
+    <eds-tabs class="eds">
+            ${require('./eds-tabs.html')}  
+        <eds-tab label="Person Overview" active="true" class="eds" aria-hidden="false" id="tab-panel-0" aria-labelledby="tab-0"
+            role="tabpanel">
+
+        </eds-tab>
+        <eds-tab label="Profile" class="eds" id="tab-panel-1" aria-labelledby="tab-1" aria-hidden="true" role="tabpanel">
+            <div class="containerFlex">
+                <div>Profile content...</div>
+            </div>
+        </eds-tab>
+        <eds-tab aria-expanded="true" label="Person Overview" class="eds" aria-hidden="false" id="tab-panel-0"
+            aria-labelledby="tab-0" role="tabpanel" active="true">
+            <div class="containerFlex">
+                <div class="containerSide">
+                    ${require('./profile-details.html')}
+                    ${require('./collection-info.html')}
+                    ${require('./customer-preference.html')}
+                    ${require('./dca.html')}
+
+                </div>
+                <div class="containerMiddle">
+                    
+    <div class="contactdetails__innercont">
+        <div>
+            <h2 class="contactdetails__headertext">Contact Details</h2>
+            <button class="btn contactdetails__btn" value="Add">Add</button>
+        </div>
+    </div>
+    <eds-card class="eds">
+        <div class="contactdetails__width">
+            <li class="contactdetails__list--display">
+                <a href="javascript:void(0);" title="Expandless icon" class="contactdetails__list--text">
+                    <span class="contactdetails__eds-accordion-caret"></span>
+                    <span class="contactdetails__addresstext">Addresses</span>
+                </a>
+            </li>
+            <div class="contactdetails__list--display">
+                <eds-dropdown class="eds contactdetails__select--right">
+                    <label class="style-scope eds-dropdown"></label>
+                    <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
+                        <span class="eds-dropdown-value style-scope eds-dropdown">Current</span>
+                        <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                        <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                    </div>
+                    <div class="helper-text style-scope eds-dropdown"></div>
+                    <div class="eds-dropdown-options style-scope eds-dropdown">
+                        <div class="eds-dropdown-searchbox style-scope eds-dropdown">
+                            <div class="eds-search-icon style-scope eds-dropdown">
+                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="style-scope eds-dropdown">
+                                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                                        class="style-scope eds-dropdown"></path>
+                                    <path d="M0 0h24v24H0z" fill="none" class="style-scope eds-dropdown"></path>
+                                </svg>
+                            </div>
+                            <input type="text" placeholder="Search" class="style-scope eds-dropdown">
+                        </div>
+                        <ul class="style-scope eds-dropdown">
+                            <li tabindex="0" data-value="Current" class="style-scope eds-dropdown">Current
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slotted style-scope eds-dropdown">
+
+                        <eds-option selected="">Current</eds-option>
+
+                    </div>
+                </eds-dropdown>
+            </div>
+        </div>
+
+        <div class="contactdetails__addressdetails">
+            <div class="contactdetails__homeaddress">
+                <div class="contactdetails__addressheader">
+                    <span class="contactdetails__headtext">Home</span>
+                    <div class="contactdetails__addressheader--displayinline">
+                        <eds-tag motif="success" class="eds">Preferred</eds-tag>
+                    </div>
+                    <a class="contactdetails__edit">
+                        <img/>
+                        <span class="contactdetails__edittext">Edit</span>
+                    </a>
+                </div>
+                <hr>
+                <div class="contactdetails__address">
+                    17 Jasper Close
+                    <br> John Peace Road
+                    <br> Nottingham
+                    <br> NG5 2DU
+                    <br>
+                </div>
+                <p class="contactdetails__validity--padding">
+                    <span class="contactdetails__validity">Valid From</span>
+                    <span class="contactdetails__validity contactdetails__validity--font">18/05/2018</span>
+                </p>
+            </div>
+            <div class="contactdetails__workaddress">
+                <div class="contactdetails__addressheader">
+                    <span class="contactdetails__headtext">Work</span>
+                    <a class="contactdetails__edit">
+                        <img/>
+                        <span class="contactdetails__edittext">Edit</span>
+                    </a>
+                </div>
+                <hr>
+                <div class="contactdetails__address">
+                    23 Brampton Street
+                    <br> Peterson Way
+                    <br> Bookside
+                    <br> St Anns
+                    <br> Nottingham
+                    <br> NG31 9LF
+                    <br>
+                </div>
+                <p class="contactdetails__validity--padding15">
+                    <span class="contactdetails__validity">Valid From</span>
+                    <span class="contactdetails__validity--font">18/05/2018</span>
+                </p>
+
+                <p class="contactdetails__validity--padding">
+                    <span class="contactdetails__validity">Valid To</span>
+                    <span class="contactdetails__validity--font">23/08/2018</span>
+                </p>
+            </div>
+        </div>
+    </eds-card>
+    <div class="contactdetails__closedaccordian">
+        <div class="contactdetails__addressheader">
+            <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
+            <span class="contactdetails__headtext contactdetails__headertext--padding">Email addresses</span>
+        </div>
+        <div class="contactdetails__addressheader">
+            <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
+            <span class="contactdetails__headtext contactdetails__headertext--padding">phone numbers</span>
+        </div>
+    </div>
+    ${require('./remainder.html')}
+
+                </div>
+                <div class="containerSide">
+                        ${require('./activites.html')}
+                </div>
+            </div>
+        </eds-tab>
+    </eds-tabs>
+</section>
