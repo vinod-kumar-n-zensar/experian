@@ -13,8 +13,8 @@ import '../styles/pcc-accordian.scss';
 import '../styles/eds-card.scss';
 import '../styles/eds-dropdown.scss';
 import '../styles/eds-icon.scss';
-import '../styles/eds-timeline-item.scss'
-import '../styles/eds-tag.scss'
-import '../styles/activities.scss'
-import '../styles/contact-details.scss'
-
+import '../styles/eds-timeline-item.scss';
+import '../styles/eds-tag.scss';
+import '../styles/activities.scss';
+import '../styles/contact-details.scss';
+import '../styles/promise-pay.scss';

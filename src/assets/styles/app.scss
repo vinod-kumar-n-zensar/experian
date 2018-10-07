@@ -58,3 +58,54 @@ body{
 	clear: both;
 	float: none;
 }
+.btn{
+	width: 120px;
+	padding: 10px 0;
+	border-radius: 4px;
+	background-color: $frenchBlue;
+	border: solid 1px $btnBorder;
+	@include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $whiteColor);
+  	text-align: center;
+}
+.bor-left--{
+	&none{
+		border-left: none!important;
+	}
+}
+.mar-right{
+	&--none{
+		margin-right: 0!important;
+	}
+}
+.mar-top{
+	&--none{
+		margin-top: 0!important;
+	}
+}
+.mar-bot{
+	&--bot{
+		margin-bottom: 0!important;
+	}
+}
+.txt-aln{
+	&--right{
+		text-align: right!important;
+	}
+}
+.mar-tpbt{
+	&--20{
+		margin: 20px 0;
+	}
+}
+.btn{
+	&--ok{
+		width: 45px!important;
+		margin-right: 10px;
+	}
+	&--cancel{
+		background: $whiteLightColor;
+		border: solid 1px $lightGreyColor;
+		color: $blackGreyColor;
+		width: 80px;
+	}
+}

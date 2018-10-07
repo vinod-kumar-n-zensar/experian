@@ -1,0 +1,107 @@
+@import "../styles/variables.scss";
+.promisepay{
+	&__navtab{
+		width: 200px;
+		margin: 0 auto 20px;
+		border-radius: 4px; 
+	}
+	&__navtabcont{
+		padding: 0;
+		line-height: 10px;
+	}
+	&__navtablist{
+		list-style: none;
+		line-height: 10px;
+	}
+	&__navtablink{
+		border: solid 1px $navTabBgColor;
+		text-decoration: none;
+		text-align: center;
+		@include fontStyling($family: 'Roboto-Medium', $size: 16px, $color: $frenchBlue);
+		min-width: 97px;
+	    float: left;
+	    padding: 10px 0;
+	}
+	&--navtablinkactive{
+		background: $navTabBgColor;
+		color: $whiteColor!important;
+	}
+	&--navtablinkfirst{
+		border-radius: 4px 0 0 4px!important;
+	}
+	&--navtablinklast{
+		border-radius: 0 4px 4px 0!important;
+	}
+	&__heading{
+		@include fontStyling($family: 'Roboto-Regular', $size: 20px!important, $color: $blackColor);
+		margin-bottom: 25px;
+	}
+	&__list{
+		margin-bottom: 10px;
+		width: 100%;
+    	float: left;
+	}
+	&__label{
+		@include fontStyling($family: 'Roboto-Regular', $size: 14px, $color: $frenchBlue);
+		min-width: 210px;
+		float: left;
+		padding-top: 5px;
+		position: relative;
+	}
+	&__required{
+	    position: absolute;
+	    top: 3px;
+	    font-size: 14px;
+	    font-family: "Roboto-Regular";
+	    font-weight: normal;
+	    color: #426da9;
+	    left: -9px;
+	}
+	&__input{
+		border: solid 1px $lightGreyColor;
+		padding: 5px;
+		background: $whiteColor;
+		width: 140px;
+		float: left;
+		border-radius: 4px;
+		@include fontStyling($family: 'Roboto-Regular', $size: 14px, $color: $blackGreyColor);
+	}
+	&--readonly{
+		background: $whiteLightColor;
+	}
+	&--smlwidth{
+		width: 50px;
+		margin-left: 10px;
+	}
+	&__output{
+		padding-top: 5px;
+	}
+	&__btncont{
+		margin: 0!important;
+		border-radius: 0 0 4px 4px;
+		border-top: 0!important;
+	}
+	&__help{
+		float: right;
+		border-radius: 4px;
+		padding: 5px;
+		border: solid 1px $frenchBlue;
+	}
+	&__helpimg{
+		width: 20px;
+		height: 20px;
+		float: left;
+	}
+	&__innertab{
+		display: none;
+	}
+	&--selectedtab{
+		display: block;
+	}
+}
+.eds{
+	&--promisecont{
+		margin-bottom: 0!important;
+		border-radius: 4px 4px 0 0;
+	}
+}

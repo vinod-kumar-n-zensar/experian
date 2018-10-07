@@ -60,23 +60,30 @@ module.exports = {
     new HtmlWebpackPlugin({
         hash: true,
         title: 'Experia',
-      filename: 'index.html',
-      template: 'index.html',
-      inject: false
+        filename: 'index.html',
+        template: 'index.html',
+        inject: false
     }),
     new HtmlWebpackPlugin({
         hash: true,
         title: 'Experia',
-      filename: 'acct-summary.html',
-      template: 'acct-summary.html',
-      inject: false
+        filename: 'acct-summary.html',
+        template: 'acct-summary.html',
+        inject: false
     }),
     new HtmlWebpackPlugin({
-      hash: true,
-      title: 'Experia',
-    filename: 'contact-details.html',
-    template: 'contact-details.html',
-    inject: false
-  }),
+        hash: true,
+        title: 'Experia',
+        filename: 'contact-details.html',
+        template: 'contact-details.html',
+        inject: false
+    }),
+    new HtmlWebpackPlugin({
+        hash: true,
+        title: 'Experia',
+        filename: 'promise-pay.html',
+        template: 'promise-pay.html',
+        inject: false
+    }),
   ]
 }

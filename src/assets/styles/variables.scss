@@ -49,7 +49,7 @@ $btnBorder: #004590;
 $btnBackground: #EDF4FA;
 $veryLightPink: #dcdcdc;
 $darkPurple: #6d2077;
-
+$navTabBgColor: #d82b80;
 //mixins
 @mixin padding-mixin($number) {
     padding: $number;
@@ -75,10 +75,12 @@ $darkPurple: #6d2077;
  font-weight: normal;
  color: $color;
 }
-@mixin headerIcons($width, $height){
+@mixin headerIcons($width, $height, $imgurl){
 width: $width;
 height: $height;
 float: left;
+background: url($imgurl) no-repeat center center transparent; 
+background-size: 100%;
 }
 
 $blackColor: #000000;

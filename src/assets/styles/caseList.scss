@@ -38,8 +38,7 @@
 	}
 	&__goicon{
 		margin-left: 5px;
-	    width: 9px;
-	    height: 14px;
+    	@include headerIcons($width: 9px, $height: 14px, $imgurl: '../images/next__icon.png');
 	    float: right;
 	}
 	&__balance{
@@ -82,40 +81,31 @@
 	    bottom: 10px;
 	}
 	&__profileicon{
-	    width: 100px;
-	    height: 100px;
 	    opacity: 0.3;
 	    position: absolute;
 	    right: -15px;
 	    top: -13px;
+    	@include headerIcons($width: 100px, $height: 100px, $imgurl: '../images/profile__icon.png');
 	}
 	&--nobg{
 		border-bottom: solid 1px $veryLightPink;
 		background: $whiteColor;
 	}
 	&__usericon{
-		width: 14px;
-  		height: 14px;
   		margin-right: 5px;
-  		float: left;
+    	@include headerIcons($width: 14px, $height: 14px, $imgurl: '../images/user__icon.png');
 	}
 	&__fileicon{
-		width: 15px;
-  		height: 30px;
-  		float: left;
   		margin-right: 5px;
+    	@include headerIcons($width: 15px, $height: 30px, $imgurl: '../images/file__icon.png');
 	}
 	&__diverticon{
-		width: 18px;
-  		height: 30px;
-  		float: left;
   		margin-right: 5px;
+    	@include headerIcons($width: 18px, $height: 30px, $imgurl: '../images/divert__icon.png');
 	}
 	&__foldericon{
-		width: 18px;
-  		height: 30px;
-  		float: left;
   		margin-right: 5px;
+    	@include headerIcons($width: 18px, $height: 30px, $imgurl: '../images/userfolder_icon.png');
 	}
 	&__boldtext{
 		@include fontStyling($family: 'Roboto-Bold', $size: 13px, $color: $barneyColor);
