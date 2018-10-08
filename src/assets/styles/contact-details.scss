@@ -74,6 +74,9 @@
         a{
             position: relative;
             vertical-align: sub;
+            .contactdetails__eds-accordion-caret{
+                top:8px;
+            }
         }
     }
     &__eds-accordion-caret{
