@@ -1,6 +1,5 @@
 @import "../styles/variables.scss";
 .header{
-	border-bottom: solid 2px #ba2f7d; 
 	padding: 10px 0 0 0; 
 	float: left; 
 	width: 100%;
@@ -20,6 +19,7 @@
 		@include fontStyling($family: 'Roboto-Regular', $size: 16px, $color: $blackGreyColor);
 		padding: 10px 0;
 		float: left;
+		text-decoration: none;
 	}
 	&__nav{
 		float: right;
@@ -78,7 +78,25 @@
 	&--userprofile{
 		border: solid 2px #426da9;
 	    border-radius: 50%;
-	    padding: 6px 5px;
+	    padding: 1px 5px;
 	    font-size: 12px;
+	}
+	&__hrline{
+		height: 2px!important;
+	  	-webkit-box-sizing: border-box!important;
+	  	-moz-box-sizing: border-box!important;
+		box-sizing: border-box!important;
+		background-position: 0 0, 0 100%!important;
+		background-repeat: no-repeat!important;
+		-webkit-background-size: 100% 4px!important;
+		-moz-background-size: 100% 4px!important;
+		background-size: 100% 4px!important;
+		background-image: -webkit-linear-gradient(left, $gradientLeftColor 0%, $gradientRightColor 100%), -webkit-linear-gradient(left, $gradientLeftColor 0%, $gradientRightColor 100%)!important;
+		background-image: -moz-linear-gradient(left, $gradientLeftColor 0%, $gradientRightColor 100%), -moz-linear-gradient(left, $gradientLeftColor 0%, $gradientRightColor 100%)!important;
+		background-image: -o-linear-gradient(left, $gradientLeftColor 0%, $gradientRightColor 100%), -o-linear-gradient(left, $gradientLeftColor 0%, $gradientRightColor 100%)!important;
+		background-image: linear-gradient(to right, $gradientLeftColor 0%, $gradientRightColor 100%), linear-gradient(to right, $gradientLeftColor 0%, $gradientRightColor 100%)!important;
+		margin: 0;
+		float: left;
+		width: 100%;
 	}
 }

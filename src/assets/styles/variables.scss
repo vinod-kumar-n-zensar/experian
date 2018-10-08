@@ -50,6 +50,8 @@ $btnBackground: #EDF4FA;
 $veryLightPink: #dcdcdc;
 $darkPurple: #6d2077;
 $navTabBgColor: #d82b80;
+$gradientLeftColor: #ba2f7d;
+$gradientRightColor: #26478d;
 //mixins
 @mixin padding-mixin($number) {
     padding: $number;
@@ -65,16 +67,10 @@ $navTabBgColor: #d82b80;
    }
    @mixin fontStyling($family, $size, $color) {
     font-size: $size;
-    font-family: $family;
-   font-weight: normal;
-   color: $color;
+  font-family: $family !important;
+  font-weight: normal !important;
+  color: $color;
   }
-@mixin fontStyling($family, $size, $color) {
-  font-size: $size;
-  font-family: $family;
- font-weight: normal;
- color: $color;
-}
 @mixin headerIcons($width, $height, $imgurl){
 width: $width;
 height: $height;

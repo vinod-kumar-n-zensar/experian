@@ -46,6 +46,9 @@ eds-tabs {
 			display: table;
 		}
 	}
+	& [role="tabpanel"]{
+		padding-left: 36px;
+	}
 	eds-tab[active] {
 		display: block;
 		opacity: 1;

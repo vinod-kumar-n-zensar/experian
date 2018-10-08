@@ -1,30 +1,33 @@
 <eds-tabs background="gray" class="eds">
     <ul class="tab-labels style-scope eds-tabs" role="tablist">
-        <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="tab-panel-1" aria-selected="true"
-                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Activities</a></li>
+        <li role="presentation" class="style-scope eds-tabs">
+            <a href="javascript:void(0);" id="tab-activities" aria-selected="true" role="tab" class="style-scope eds-tabs">
+                Activities
+            </a>
+        </li>
     </ul>
     <ul class="style-scope eds-tabs activity-tabs">
-        <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="Promise to Pay" aria-selected="false"
-                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Promise to Pay</a></li>
-        <li role="presentation" class="style-scope eds-tabs memo-tab"><a id="tab-1" aria-controls="Memo" aria-selected="false"
+        <li role="presentation" class="style-scope eds-tabs"><a id="tab-3" onclick="switchParentTab('3')" aria-controls="tab-panel-3" aria-selected="true" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">Promise to Pay</a></li>
+        <li role="presentation" class="style-scope eds-tabs memo-tab"><a id=" " aria-controls="Memo" aria-selected="false"
                 href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Memo <span class="eds-accordion-caret"></span></a>
-                <ul>
-                    <li>
-                        <a id="tab-1" aria-controls="Memo" aria-selected="false"
-                        href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Standard Memo</a>
-                    </li>
-                    <li>
-                        <a id="tab-1" aria-controls="Memo" aria-selected="false"
-                        href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Important Memo</a>
-                    </li>
-                </ul>
-            </li>
-        <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="Move to Arrangement" aria-selected="false"
-                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Move to Arrangement</a></li>
-        <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="Referral" aria-selected="false"
+            <ul>
+                <li>
+                    <a id=" " aria-controls="Memo" aria-selected="false" href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Standard
+                        Memo</a>
+                </li>
+                <li>
+                    <a id=" " aria-controls="Memo" aria-selected="false" href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Important
+                        Memo</a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="style-scope eds-tabs"><a id=" " aria-controls="Move to Arrangement"
+                aria-selected="false" href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Move to Arrangement</a></li>
+        <li role="presentation" class="style-scope eds-tabs"><a id=" " aria-controls="Referral" aria-selected="false"
                 href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Referral</a></li>
-        <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="Report Account Exceptions" aria-selected="false"
-                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Report Account Exceptions</a></li>
+        <li role="presentation" class="style-scope eds-tabs"><a id=" " aria-controls="Report Account Exceptions"
+                aria-selected="false" href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Report Account
+                Exceptions</a></li>
     </ul>
     <eds-tab label="Alerts" class="eds" aria-hidden="true" id="tab-panel-0" aria-labelledby="tab-0" role="tabpanel">
         <p>
@@ -37,7 +40,7 @@
             </eds-alert>
         </p>
     </eds-tab>
-    <eds-tab label="Activities" class="eds" id="tab-panel-1" aria-labelledby="tab-1" aria-hidden="true" role="tabpanel">
+    <eds-tab label="Activities" class="eds" role="tabpanel">
         <p>
             Activities content...
         </p>
@@ -45,20 +48,24 @@
 </eds-tabs>
 
 <section class="notes-tab">
-
-<eds-accordion class="greyHeading eds marginBtm20" background="white" role="tablist">
-        <eds-accordion-panel label="Notes" aria-expanded="false" expandedlabel="Notes" role="tab"><button class="eds-accordion-label"><i class="api-icon-element material-icons style-scope eds-icon">speaker_notes</i> <span class="eds-accordion-label-text text-Cap">Notes
-                    </span><span class="eds-accordion-label-text text-Cap"> Notes</span><span class="eds-accordion-caret"></span></button>
-                    <textarea name="" id="" cols="30" rows="18"></textarea>
+    <eds-accordion class="greyHeading eds marginBtm20" background="white" role="tablist">
+        <eds-accordion-panel label="Notes" aria-expanded="false" expandedlabel="Notes" role="tab">
+            <button class="eds-accordion-label">
+                <i class="api-icon-element material-icons style-scope eds-icon">speaker_notes</i>
+                <span class="eds-accordion-label-text text-Cap"> Notes </span>
+                <span class="eds-accordion-label-text text-Cap"> Notes</span>
+                <span class="eds-accordion-caret"></span>
+            </button>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
         </eds-accordion-panel>
         <div class="table">
             <div class="row">
-                    <div class="cell">
-                            Last saved 02:05 pm
-                    </div>
-                    <div class="cell">
-                            <button class="note-btn">Save Note</button>
-                    </div>
+                <div class="cell">
+                    Last saved 02:05 pm
+                </div>
+                <div class="cell">
+                    <button class="note-btn">Save Note</button>
+                </div>
             </div>
         </div>
     </eds-accordion>

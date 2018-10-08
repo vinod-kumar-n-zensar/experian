@@ -1,18 +1,10 @@
 <section class="container acct-container clear">
-        ${require('./pcc-secondary-header.html')}  
+    ${require('./pcc-secondary-header.html')}
 
     <eds-tabs class="eds">
-            ${require('./eds-tabs.html')}  
-        <eds-tab label="Person Overview" active="true" class="eds" aria-hidden="false" id="tab-panel-0" aria-labelledby="tab-0"
-            role="tabpanel">
+        ${require('./eds-tabs.html')}
 
-        </eds-tab>
-        <eds-tab label="Profile" class="eds" id="tab-panel-1" aria-labelledby="tab-1" aria-hidden="true" role="tabpanel">
-            <div class="containerFlex">
-                <div>Profile content...</div>
-            </div>
-        </eds-tab>
-        <eds-tab aria-expanded="true" label="Person Overview" class="eds" aria-hidden="false" id="tab-panel-0"
+        <eds-tab aria-expanded="true" label="A1000056" class="eds accountsTabPanel" aria-hidden="false" id="tab-panel-0"
             aria-labelledby="tab-0" role="tabpanel" active="true">
             <div class="containerFlex marginTop20">
                 <div class="containerSide left">
@@ -26,38 +18,38 @@
                     <eds-card class="eds">
                         <header>
                             <div>
-                                    <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
-                                        <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
-                                            <span class="eds-dropdown-value style-scope eds-dropdown">Account Summary</span>
-                                            <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
-                                            <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
-                                        </div>
-                                    </eds-dropdown>
+                                <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
+                                    <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
+                                        <span class="eds-dropdown-value style-scope eds-dropdown">Account Summary</span>
+                                        <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                                        <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                                    </div>
+                                </eds-dropdown>
                             </div>
                             <div>
-                                
+
                             </div>
                         </header>
                         <main>
                             <p>
                             </p>
                             <div class="table middle evenHighlight">
-                                    <div class="row">
-                                            <div class="cell font-wt500">
-                                            </div>
-                                            <div class="cell font-wt500">
-                                                Date
-                                            </div>
-                                            <div class="cell font-wt500">
-                                                Code
-                                            </div>
-                                        </div>
+                                <div class="row">
+                                    <div class="cell font-wt500">
+                                    </div>
+                                    <div class="cell font-wt500">
+                                        Date
+                                    </div>
+                                    <div class="cell font-wt500">
+                                        Code
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="cell">
                                         Last Letter
                                     </div>
                                     <div class="cell">
-                                            16/02/2018
+                                        16/02/2018
 
                                     </div>
                                     <div class="cell">
@@ -69,7 +61,7 @@
                                         Last Letter 1
                                     </div>
                                     <div class="cell">
-                                            10/03/2018
+                                        10/03/2018
                                     </div>
                                     <div class="cell">
                                         MR001
@@ -80,7 +72,7 @@
                                         Last Reg Ltr
                                     </div>
                                     <div class="cell">
-                                            21/03/2018
+                                        21/03/2018
                                     </div>
                                     <div class="cell">
                                         REG1
@@ -102,7 +94,7 @@
                                         Last SMS
                                     </div>
                                     <div class="cell">
-                                            20/03/2018
+                                        20/03/2018
 
                                     </div>
                                     <div class="cell">
@@ -114,7 +106,7 @@
                                         Last Dialler Call
                                     </div>
                                     <div class="cell">
-                                            19/03/2018
+                                        19/03/2018
                                     </div>
                                     <div class="cell">
                                         RPC
@@ -125,7 +117,7 @@
                                         Last Dialler Call-1
                                     </div>
                                     <div class="cell">
-                                            12/03/2018
+                                        12/03/2018
                                     </div>
                                     <div class="cell">
                                         No answer
@@ -139,7 +131,7 @@
                                         n/a
                                     </div>
                                     <div class="cell">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -152,9 +144,17 @@
 
                 </div>
                 <div class="containerSide">
-                        ${require('./activites.html')}
+                    ${require('./activites.html')}
                 </div>
             </div>
+        </eds-tab>
+        <eds-tab label="Profile" class="eds accountsTabPanel" id="tab-panel-1" aria-labelledby="tab-1" aria-hidden="true"
+            role="tabpanel">
+                ${require('./contact-details.html')}
+        </eds-tab>
+        <eds-tab aria-expanded="true" label="Promise To Pay" class="eds" aria-hidden="false" id="tab-panel-3"
+            aria-labelledby="tab-3" role="tabpanel">
+            ${require('./promise-pay.html')}
         </eds-tab>
     </eds-tabs>
 </section>

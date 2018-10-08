@@ -1,18 +1,4 @@
-<section class="container acct-container clear">
-    ${require('./pcc-secondary-header.html')}  
-    <eds-tabs class="eds mar-bot--none">
-        ${require('./eds-tabs.html')}  
-        <eds-tab label="Person Overview" active="true" class="eds" aria-hidden="false" id="tab-panel-0" aria-labelledby="tab-0"
-            role="tabpanel">
 
-        </eds-tab>
-        <eds-tab label="Profile" class="eds" id="tab-panel-1" aria-labelledby="tab-1" aria-hidden="true" role="tabpanel">
-            <div class="containerFlex">
-                <div>Profile content...</div>
-            </div>
-        </eds-tab>
-        <eds-tab aria-expanded="true" label="Person Overview" class="eds" aria-hidden="false" id="tab-panel-0"
-            aria-labelledby="tab-0" role="tabpanel" active="true">
             <div class="containerFlex">
                 <div class="containerSide">
                     ${require('./profile-details.html')}
@@ -167,6 +153,3 @@
                     ${require('./activites.html')}
                 </div>
             </div>
-        </eds-tab>
-    </eds-tabs>
-</section>

@@ -7,14 +7,8 @@
  * These variables are available to all components globally and are thus designated with an "eds-" prefix.
  * Components may implement these and pass-through to a local variable name.
  */
- @keyframes "eds-spin" {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
+
+@import './variables.scss';
 eds-icon[spin] {
 	animation: eds-spin 2s infinite linear;
 }
@@ -28,6 +22,12 @@ eds-icon {
 	}
 	>* {
 		font-size: inherit;
+	}
+}
+eds-icon.s12 {
+	>* {
+		font-size: 12px;
+		vertical-align: bottom;
 	}
 }
 eds-icon.s16 {
@@ -70,4 +70,35 @@ eds-icon[border] {
 	padding: 0.8rem;
 	border: 4px solid #d8d8d8;
 	border-radius: 3px;
+}
+.phone-icon{
+	width: 32px;
+    height: 34px;
+    background: $frenchBlue;
+	text-align: center;
+	border-radius: 3px;
+	margin-left:10px;
+	svg{
+		fill: $whiteColor;
+		vertical-align: bottom;
+	}
+ }
+ .timer-icon{
+	 svg{
+		vertical-align: text-top;
+		fill: $veryLightPink;
+	 }
+	 margin-right: 11.3px;
+
+ }
+.eds-icon.time{
+	font-size: 12px;
+}
+@keyframes "eds-spin" {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }

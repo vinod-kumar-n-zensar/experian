@@ -39,7 +39,7 @@ $switch-color: #888888;
 	}
 	&:last-child {
 		background-color: $background_color_1;
-		box-shadow: inset 4px 0 5px -4px rgba(0,0,0,0.4);
+		padding:10px 0;
 	}
 	&:first-child {
 		padding-top: 15px;

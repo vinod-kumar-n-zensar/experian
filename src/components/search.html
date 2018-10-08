@@ -1,49 +1,50 @@
-<div class="search">
-	<div class="search__innercont">
-		<h2 class="search__heading">Your stats based on your calls today:</h2>
-		<div class="search__callstats">
-			<h3 class="search__statcount">
-				5
-			</h3>
-			<p class="search__statdesc">Promises Set</p>
-		</div>
-		<div class="search__callstats">
-			<h3 class="search__statcount">
-				60 <span class="search__percentage">%</span>
-			</h3>
-			<p class="search__statdesc">Promise Rate as % RPC</p>
-		</div>
-		<div class="search__callstats">
-			<h3 class="search__statcount">
-				60 <span class="search__percentage">%</span>
-			</h3>
-			<p class="search__statdesc">Kept Promises</p>
-		</div>
-		<div class="search__callstats">
-			<h3 class="search__statcount">
-				6
-			</h3>
-			<p class="search__statdesc">Payments taken</p>
-		</div>
-		<div class="search__callstats search--collected">
-			<h3 class="search__statcount">
-				2,400
-			</h3>
-			<p class="search__statdesc">£’s Collected</p>
-		</div>
-		<div class="search__callstats">
-			<h3 class="search__statcount">
-				7
-				<p class="search__statdesc">Positive Outcomes</p>
-			</h3>
-		</div>
-		<div class="search__bycont">
-			<form class="search__form" action="acct-summary.html">
-				<input type="number" class="search__input" min="0" placeholder="Account Number" />
-				<input type="number" class="search__input" min="0" placeholder="National Insruance Number" />
-				<input type="date" class="search__input" placeholder="Date of Birth (dd/mm/yyyy)" />
-				<input type="submit" class="btn search__submit" value="Search" />
-			</form>
+<div class="search" role="main">
+		<h2 class="search__visuallyhidden">Stats and account details search section</h2>
+		<div class="search__innercont" aria-labelledby="search__stats">
+			<h2 id="search__stats" class="search__heading">Your stats based on your calls today:</h2>
+			<div class="search__callstats">
+				<h3 class="search__statcount">
+					5
+				</h3>
+				<p class="search__statdesc">Promises Set</p>
+			</div>
+			<div class="search__callstats">
+				<h3 class="search__statcount">
+					60 <span class="search__percentage">%</span>
+				</h3>
+				<p class="search__statdesc">Promise Rate as % RPC</p>
+			</div>
+			<div class="search__callstats">
+				<h3 class="search__statcount">
+					60 <span class="search__percentage">%</span>
+				</h3>
+				<p class="search__statdesc">Kept Promises</p>
+			</div>
+			<div class="search__callstats">
+				<h3 class="search__statcount">
+					6
+				</h3>
+				<p class="search__statdesc">Payments taken</p>
+			</div>
+			<div class="search__callstats search--collected">
+				<h3 class="search__statcount">
+					2,400
+				</h3>
+				<p class="search__statdesc">£’s Collected</p>
+			</div>
+			<div class="search__callstats">
+				<h3 class="search__statcount">
+					7
+					<p class="search__statdesc">Positive Outcomes</p>
+				</h3>
+			</div>
+			<div class="search__bycont" role="search">
+				<form class="search__form" action="acct-summary.html">
+					<label for="account__number" class="search__visuallyhidden"></label><input id="account__number" type="number" class="search__input" min="0" placeholder="Account Number" aria-label="account number" />
+					<label for="ni__number" class="search__visuallyhidden"></label><input id="ni__number" type="number" class="search__input" min="0" placeholder="National Insruance Number" aria-label="national number" />
+					<label for="date" class="search__visuallyhidden"></label><input id="date" type="text" class="search__input" placeholder="Date of Birth (dd/mm/yyyy)" aria-label="date of birth" />
+					<label for="search" class="search__visuallyhidden"></label><input id="search" type="submit" class="btn search__submit" value="Search" aria-label="Search button to search account"/>
+				</form>
+			</div>
 		</div>
 	</div>
-</div>

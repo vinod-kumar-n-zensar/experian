@@ -9,8 +9,559 @@
 </head>
 <body class="eds eds-show-body">
         <section class="container">
-                ${require('./src/components/header.html')}
-                ${require('./src/components/contact-details.html')}
+                <header class="header" role="banner">
+        <h1 class="header__logo">
+            <a class="header__logolink" href="index.html" title="Experian">Experian</a>
+        </h1>
+        <a class="header__logodesc" tabindex="0" href="javascript:void(0)" title="Collections link"> Collections </a>
+        <nav class="header__nav" role="navigation">
+            <ul class="header__listcont">
+                <li class="header__list">
+                    <a class="header__link" href="javascript:void(0);" title="Search">
+                        <i class="header__searchicon"></i>
+                        Search
+                    </a>
+                </li>
+                <li class="header__list">
+                    <a class="header__link" href="javascript:void(0);" title="Load Next">
+                        <i class="header__nexticon"></i>
+                        Load Next
+                    </a>
+                </li>
+                <li class="header__list">
+                    <a class="header__link" href="javascript:void(0);" title="View all Caselists">
+                        <i class="header__caselisticon"></i>
+                        View all Caselists
+                    </a>
+                </li>
+                <li class="header__list bor-left--none">
+                    <a class="header__link" href="javascript:void(0);" title="Menu">
+                        <i class="header__menuicon"></i>
+                    </a>
+                </li>
+                <li class="header__list bor-left--none">
+                    <a class="header__link" href="javascript:void(0);" title="Help">
+                        <i class="header__helpicon"></i>
+                    </a>
+                </li>
+                <li class="header__list bor-left--none">
+                    <a class="header__link" href="javascript:void(0);" title="Unread Messages">
+                        <i class="header__messageicon"></i>
+                        <span class="header__counter">3</span>
+                    </a>
+                </li>
+                <li class="header__list bor-left--none">
+                    <a class="header__link" href="javascript:void(0);" title="Unread Notifications">
+                        <i class="header__notificationicon"></i>
+                        <span class="header__counter">3</span>
+                    </a>
+                </li>
+                <li class="header__list bor-left--none">
+                    <a class="header__link header--userprofile" href="javascript:void(0);" title="User Profile">
+                        RV
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <hr class="header__hrline">
+    </header>
+                <section class="container acct-container clear">
+         <pcc-eds-secondary-header class="eds container">
+        <div class="header-container style-scope pcc-eds-secondary-header">
+            <div class="icon-container style-scope pcc-eds-secondary-header">
+                <eds-icon icon="home" class="s16 home-icon eds style-scope pcc-eds-secondary-header" library="material-icon-font"><i
+                        class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">home</i></eds-icon>
+            </div>
+
+            <div class="tabs-container style-scope pcc-eds-secondary-header">
+                <pcc-eds-secondary-header-tab class="eds style-scope pcc-eds-secondary-header" person="James Brown"
+                    data-index="0" active="undefined">
+                    <div class="info-container">
+                        <eds-icon icon="person" class="s16 eds" library="material-icon-font"><i class="api-icon-element material-icons style-scope eds-icon"
+                                style="transform: scale(1.35);">person</i></eds-icon>
+                        <div class="person-name">James Brown</div>
+                    </div>
+                    <div class="tab-controls">
+                        <!-- <eds-icon icon='query_builder' class='s16'></eds-icon>
+    <div class="time">00:00</div>
+    <eds-icon icon='phone' class='s16'></eds-icon> -->
+                        <!-- <eds-button motif='tertiary' icon='close' class='icon-only'></eds-button> -->
+                        <eds-icon icon="close" class="close-button s16 eds" library="material-icon-font"><i class="api-icon-element material-icons style-scope eds-icon"
+                                style="transform: scale(1.35);">close</i></eds-icon>
+                    </div>
+                </pcc-eds-secondary-header-tab>
+            </div>
+        </div>
+    </pcc-eds-secondary-header>  
+
+    <eds-tabs class="eds">
+            <ul class="tab-labels style-scope eds-tabs" role="tablist">
+        <li role="presentation" class="style-scope eds-tabs"><a id="tab-0" aria-controls="tab-panel-0"
+                aria-selected="true" href="#tab-panel-0" role="tab" class="style-scope eds-tabs">A1000056</a></li>
+        <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="tab-panel-1"
+                aria-selected="false" href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Profile</a></li>
+    </ul>  
+        <eds-tab label="Person Overview" active="true" class="eds" aria-hidden="false" id="tab-panel-0" aria-labelledby="tab-0"
+            role="tabpanel">
+
+        </eds-tab>
+        <eds-tab label="Profile" class="eds" id="tab-panel-1" aria-labelledby="tab-1" aria-hidden="true" role="tabpanel">
+            <div class="containerFlex">
+                <div>Profile content...</div>
+            </div>
+        </eds-tab>
+        <eds-tab aria-expanded="true" label="Person Overview" class="eds" aria-hidden="false" id="tab-panel-0"
+            aria-labelledby="tab-0" role="tabpanel" active="true">
+            <div class="containerFlex marginTop20">
+                <div class="containerSide left">
+                    <eds-accordion background="gray" class="eds marginBtm20" role="tablist">
+    <eds-accordion-panel label="James Brown" expandedlabel="James Brown" active="" role="tab"><button
+            class="eds-accordion-label active"><span class="eds-accordion-label-text">James Brown</span><i class="api-icon-element material-icons style-scope eds-icon eds-greyed">person</i><span
+                class="eds-accordion-label-text"> James Brown</span>  <span>									<span class="edit-tab"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>	Edit</span> </span></button>
+        <div class="table">
+            <div class="row">
+                <div class="cell">
+                    Vulnerable type
+                </div>
+                <div class="cell">
+                    <eds-tag motif="error" class="eds">Terminally ill</eds-tag>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    Route
+                </div>
+                <div class="cell eds-greyed">
+                    TBC
+                </div>
+            </div>
+        </div>
+    </eds-accordion-panel>
+</eds-accordion>
+                    <eds-accordion class="greyHeading eds marginBtm20 contact-details-card" background="white" role="tablist">
+        <eds-accordion-panel label="Contact details" expandedlabel="Contact details" active="" role="tab"><button
+                class="eds-accordion-label"><span class="eds-accordion-label-text">Collection
+                    Information</span><span class="eds-accordion-label-text">Contact details <div class="contactdetails__addressheader--displayinline">
+                            <eds-tag motif="success" class="eds">Preferred</eds-tag>
+                        </div></span><span class="eds-accordion-caret"></span></button>
+            <div class="table">
+                <div class="row">
+                    <div class="cell">
+                            Address
+                    </div>
+                    <div class="cell">
+                            17 Jasper Close
+                            John Peace Road
+                            Nottingham
+                            NG5 2DU
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                            Email Address
+                    </div>
+                    <div class="cell">
+                            james.benson9@gmail.com
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                            Phone
+                    </div>
+                    <div class="cell">
+                            07954 525878
+                    </div>
+                </div>
+            </div>
+        </eds-accordion-panel>
+    </eds-accordion>
+
+                </div>
+                <div class="containerMiddle">
+                    
+    <div class="contactdetails__innercont">
+        <div>
+            <h2 class="contactdetails__headertext font-wtnormal">Contact Details</h2>
+            <button class="btn contactdetails__btn" value="Add">Add</button>
+        </div>
+    </div>
+    <eds-card class="eds">
+        <div class="contactdetails__width marginBtm20">
+            <li class="contactdetails__list--display">
+                <a href="javascript:void(0);" title="Expandless icon" class="contactdetails__list--text">
+                    <span class="contactdetails__eds-accordion-caret"></span>
+                    <span class="contactdetails__addresstext">Addresses</span>
+                </a>
+            </li>
+            <div class="contactdetails__list--display">
+                <eds-dropdown class="eds contactdetails__select--right">
+                    <label class="style-scope eds-dropdown"></label>
+                    <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
+                        <span class="eds-dropdown-value style-scope eds-dropdown">Current</span>
+                        <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                        <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                    </div>
+                    <div class="helper-text style-scope eds-dropdown"></div>
+                    <div class="eds-dropdown-options style-scope eds-dropdown">
+                        <div class="eds-dropdown-searchbox style-scope eds-dropdown">
+                            <div class="eds-search-icon style-scope eds-dropdown">
+                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="style-scope eds-dropdown">
+                                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                                        class="style-scope eds-dropdown"></path>
+                                    <path d="M0 0h24v24H0z" fill="none" class="style-scope eds-dropdown"></path>
+                                </svg>
+                            </div>
+                            <input type="text" placeholder="Search" class="style-scope eds-dropdown">
+                        </div>
+                        <ul class="style-scope eds-dropdown">
+                            <li tabindex="0" data-value="Current" class="style-scope eds-dropdown">Current
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slotted style-scope eds-dropdown">
+
+                        <eds-option selected="">Current</eds-option>
+
+                    </div>
+                </eds-dropdown>
+            </div>
+        </div>
+
+        <div class="contactdetails__addressdetails">
+            <div class="contactdetails__homeaddress">
+                <div class="contactdetails__addressheader ">
+                    <span class="contactdetails__headtext">Home</span>
+                    <div class="contactdetails__addressheader--displayinline">
+                        <eds-tag motif="success" class="eds">Preferred</eds-tag>
+                    </div>
+                    <a class="contactdetails__edit">
+                        <img/>
+                        <span class="contactdetails__edittext">Edit</span>
+                    </a>
+                </div>
+                <div class="contactdetails__address">
+                    17 Jasper Close
+                    <br> John Peace Road
+                    <br> Nottingham
+                    <br> NG5 2DU
+                    <br>
+                </div>
+                <p class="contactdetails__validity--padding">
+                    <span class="contactdetails__validity">Valid From</span>
+                    <span class="contactdetails__validity contactdetails__validity--font">18/05/2018</span>
+                </p>
+            </div>
+            <div class="contactdetails__workaddress">
+                <div class="contactdetails__addressheader">
+                    <span class="contactdetails__headtext">Work</span>
+                    <a class="contactdetails__edit">
+                        <img/>
+                        <span class="contactdetails__edittext">Edit</span>
+                    </a>
+                </div>
+                <div class="contactdetails__address">
+                    23 Brampton Street
+                    <br> Peterson Way
+                    <br> Bookside
+                    <br> St Anns
+                    <br> Nottingham
+                    <br> NG31 9LF
+                    <br>
+                </div>
+                <p class="contactdetails__validity--padding15">
+                    <span class="contactdetails__validity">Valid From</span>
+                    <span class="contactdetails__validity--font">18/05/2018</span>
+                </p>
+
+                <p class="contactdetails__validity--padding">
+                    <span class="contactdetails__validity">Valid To</span>
+                    <span class="contactdetails__validity--font">23/08/2018</span>
+                </p>
+            </div>
+        </div>
+    </eds-card>
+    <div class="contactdetails__closedaccordian">
+        <div class="contactdetails__addressheader pos-rel">
+            <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
+            <span class="contactdetails__headtext contactdetails__headertext--padding">Email addresses</span>
+        </div>
+        <div class="contactdetails__addressheader pos-rel">
+            <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
+            <span class="contactdetails__headtext contactdetails__headertext--padding">phone numbers</span>
+        </div>
+    </div>
+    <section>
+    <div class="sort-filter marginBtm20">
+        <div>
+            <label for="">Filter by</label>
+            <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
+                <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
+                    <span class="eds-dropdown-value style-scope eds-dropdown">All events</span>
+                    <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                    <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                </div>
+
+            </eds-dropdown>
+        </div>
+        <div>
+            <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
+                <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
+                    <span class="eds-dropdown-value style-scope eds-dropdown">All users</span>
+                    <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                    <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                </div>
+            </eds-dropdown>
+        </div>
+        <div>
+            <label for="">Sort by</label>
+            <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
+                <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
+                    <span class="eds-dropdown-value style-scope eds-dropdown">Newest first</span>
+                    <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                    <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                </div>
+            </eds-dropdown>
+        </div>
+        <div>
+            <label class="form-switch">Expand all
+                <input type="checkbox">
+                <i></i> </label>
+        </div>
+    </div>
+
+</section>
+<pcc-eds-timeline-view class="eds">
+    <div class="timeline-wrapper style-scope pcc-eds-timeline-view">
+        <div slot="timeline">
+            <pcc-eds-timeline-item icon="phone_callback" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">TODAY</div>
+                            <div>21/03/2018</div>
+                            <div>09:42</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                Last Reminder Sent to Customer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="phone_missed" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">YESTERDAY</div>
+                            <div>20/03/2018</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                <div slot="slot-header-left">SMS Reminder Sent to Customer</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">2 days ago</div>
+                            <div>19/03/2018</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="phone_forwarded" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">phone_forwarded</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                <div slot="slot-header-left">Outband Call</div>
+                                <div slot="slot-header-right">
+                                    <eds-icon icon="account_circle" class="s16 eds" library="material-icon-font"><i
+                                            class="api-icon-element material-icons style-scope eds-icon eds-greyed"
+                                            style="transform: scale(1.35);">account_circle</i></eds-icon>
+                                    David Jones
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">1 week ago</div>
+                            <div>12/03/2018</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="phone_forwarded" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">phone_forwarded</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                <div slot="slot-header-left">Outband Call</div>
+                                <div slot="slot-header-right">
+                                    <eds-icon icon="account_circle" class="s16 eds" library="material-icon-font"><i
+                                            class="api-icon-element material-icons style-scope eds-icon eds-greyed"
+                                            style="transform: scale(1.35);">account_circle</i></eds-icon>
+                                    David Jones
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">1 week ago</div>
+                            <div>10/03/2018</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                Letter Reminder Sent to Customer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">1 month ago</div>
+                            <div>10/03/2018</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                Letter Reminder Sent to Customer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+        </div>
+    </div>
+</pcc-eds-timeline-view>
+
+                </div>
+                <div class="containerSide">
+                        <eds-tabs background="gray" class="eds">
+    <ul class="tab-labels style-scope eds-tabs" role="tablist">
+        <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="tab-panel-1" aria-selected="true"
+                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Activities</a></li>
+    </ul>
+    <ul class="style-scope eds-tabs activity-tabs">
+        <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="Promise to Pay" aria-selected="false"
+                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Promise to Pay</a></li>
+        <li role="presentation" class="style-scope eds-tabs memo-tab"><a id="tab-1" aria-controls="Memo" aria-selected="false"
+                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Memo <span class="eds-accordion-caret"></span></a>
+                <ul>
+                    <li>
+                        <a id="tab-1" aria-controls="Memo" aria-selected="false"
+                        href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Standard Memo</a>
+                    </li>
+                    <li>
+                        <a id="tab-1" aria-controls="Memo" aria-selected="false"
+                        href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Important Memo</a>
+                    </li>
+                </ul>
+            </li>
+        <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="Move to Arrangement" aria-selected="false"
+                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Move to Arrangement</a></li>
+        <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="Referral" aria-selected="false"
+                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Referral</a></li>
+        <li role="presentation" class="style-scope eds-tabs"><a id="tab-1" aria-controls="Report Account Exceptions" aria-selected="false"
+                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Report Account Exceptions</a></li>
+    </ul>
+    <eds-tab label="Alerts" class="eds" aria-hidden="true" id="tab-panel-0" aria-labelledby="tab-0" role="tabpanel">
+        <p>
+            <eds-alert motif="error" background="white" class="eds">
+                <div class="eds-alert-sidebar style-scope eds-alert"></div>
+                <div class="eds-alert-close-icon style-scope eds-alert">×</div>
+                <div class="eds-alert-content style-scope eds-alert">
+                    This is an example of an alert note
+                </div>
+            </eds-alert>
+        </p>
+    </eds-tab>
+    <eds-tab label="Activities" class="eds" id="tab-panel-1" aria-labelledby="tab-1" aria-hidden="true" role="tabpanel">
+        <p>
+            Activities content...
+        </p>
+    </eds-tab>
+</eds-tabs>
+
+<section class="notes-tab">
+
+<eds-accordion class="greyHeading eds marginBtm20" background="white" role="tablist">
+        <eds-accordion-panel label="Notes" aria-expanded="false" expandedlabel="Notes" role="tab"><button class="eds-accordion-label"><i class="api-icon-element material-icons style-scope eds-icon">speaker_notes</i> <span class="eds-accordion-label-text text-Cap">Notes
+                    </span><span class="eds-accordion-label-text text-Cap"> Notes</span><span class="eds-accordion-caret"></span></button>
+                    <textarea name="" id="" cols="30" rows="18"></textarea>
+        </eds-accordion-panel>
+        <div class="table">
+            <div class="row">
+                    <div class="cell">
+                            Last saved 02:05 pm
+                    </div>
+                    <div class="cell">
+                            <button class="note-btn">Save Note</button>
+                    </div>
+            </div>
+        </div>
+    </eds-accordion>
+</section>
+                </div>
+            </div>
+        </eds-tab>
+    </eds-tabs>
+</section>
         </section>
         
     <script src=build/bundle.js></script>

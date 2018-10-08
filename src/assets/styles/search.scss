@@ -13,27 +13,38 @@
 	&__callstats{
 		float: left;
 		width: 100px;
-	    margin: 40px 35px 30px;
+	    margin: 40px 55px 30px;
 	    text-align: center;
 	}
 	&__statcount{
-		@include fontStyling($family: 'Roboto-Medium', $size: 64px, $color: $statsColor);
+		@include fontStyling($family: 'Roboto-Medium', $size: 64px!important, $color: $statsColor);
 	  	text-align: center;
 	  	position: relative;
 	}
 	&__statdesc{
 		@include fontStyling($family: 'Roboto-Regular', $size: 12px, $color: $statsDescColor);
 		text-transform: uppercase;
-		margin-top: 10px;
+		margin-top: 32px;
 		text-align: center;
     	width: 100%;
+    	line-height: 17px;
+	}
+	&__visuallyhidden{
+		border: 0;
+  		clip: rect(0 0 0 0);
+  		height: 1px;
+  		margin: -1px;
+  		overflow: hidden;
+  		padding: 0;
+  		position: absolute;
+  		width: 1px;	
 	}
 	&__percentage{
 		@include fontStyling($family: 'Roboto-Bold', $size: 18px, $color: $blackGreyColor);
 		line-height: 0.83;
 		position: absolute;
-	    bottom: 10px;
-	    right: 0px;
+	    bottom: -15px;
+	    right: -3px;
 	}
 	&--collected{
 		margin: 40px 10px 30px;

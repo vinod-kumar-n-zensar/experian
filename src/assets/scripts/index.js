@@ -18,3 +18,4 @@ import '../styles/eds-tag.scss';
 import '../styles/activities.scss';
 import '../styles/contact-details.scss';
 import '../styles/promise-pay.scss';
+import '../scripts/promise-pay.js'
