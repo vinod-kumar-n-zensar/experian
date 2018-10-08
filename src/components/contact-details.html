@@ -9,11 +9,11 @@
                     
     <div class="contactdetails__innercont">
         <div class="contactdetails__headerContainer">
-            <h2 class="contactdetails__headertext font-wtnormal">Contact Details</h2>
-            <button class="btn contactdetails__btn" value="Add">Add</button>
+            <h2 class="contactdetails__headertext font-wtnormal" role="heading">Contact Details</h2>
+            <button class="btn contactdetails__btn cur--auto" value="Add">Add</button>
         </div>
     </div>
-    <eds-card class="eds contactdetails__innereds">
+    <eds-card class="eds contactdetails__innereds" aria-expanded="true">
         <div class="contactdetails__width marginBtm30">
             <li class="contactdetails__list--display">
                 <a href="javascript:void(0);" title="Expandless icon" class="contactdetails__list--text">
@@ -68,11 +68,10 @@
                     </a>
                 </div>
                 <div class="contactdetails__address">
-                    17 Jasper Close
-                    <br> John Peace Road
-                    <br> Nottingham
-                    <br> NG5 2DU
-                    <br>
+                    <p>17 Jasper Close</p>
+                    <p> John Peace Road</p>
+                     <p>Nottingham</p>
+                     <p>NG5 2DU</p>
                 </div>
                 <p class="contactdetails__validity--padding">
                     <span class="contactdetails__validity">Valid From</span>
@@ -87,13 +86,13 @@
                         <span class="contactdetails__edittext"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg> Edit</span>
                     </a>
                 </div>
-                <div class="contactdetails__address">
-                    23 Brampton Street
-                    <br> Peterson Way
-                    <br> Bookside
-                    <br> St Anns
-                    <br> Nottingham
-                    <br> NG31 9LF
+                <div class="contactdetails__address contactdetails__address--padding">
+                    <p>23 Brampton </p>
+                    <p>Peterson </p>
+                    <p>Bookside</p>
+                    <p>St Anns</p>
+                    <p>Nottingham</p>
+                    <p>NG31 9LF</p>
                     <br>
                 </div>
                 <p class="contactdetails__validity--padding15">
@@ -108,14 +107,18 @@
             </div>
         </div>
     </eds-card>
-    <div class="contactdetails__closedaccordian">
+    <div class="contactdetails__closedaccordian" aria-expanded="false">
         <div class="contactdetails__addressheader pos-rel">
+            <eds-accordion-panel>
             <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
-            <span class="contactdetails__headtext contactdetails__headertext--padding">Email addresses</span>
+            <span class="contactdetails__headtext contactdetails__headertext--padding" role="heading">Email addresses</span>
+            </eds-accordion-panel>
         </div>
-        <div class="contactdetails__addressheader pos-rel">
+        <div class="contactdetails__addressheader pos-rel" aria-expanded="false">
+            <eds-accordion-panel>
             <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
-            <span class="contactdetails__headtext contactdetails__headertext--padding">phone numbers</span>
+            <span class="contactdetails__headtext contactdetails__headertext--padding" role="heading">phone numbers</span>
+            </eds-accordion-panel>
         </div>
     </div>
     ${require('./remainder.html')}

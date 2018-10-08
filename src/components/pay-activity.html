@@ -1,5 +1,5 @@
-<eds-card class="eds eds--promisecont">
-    <h1 class="promisepay__heading">Promise to Pay (Instalment)</h1>
+<eds-card class="eds eds--promisecont" aria-describedby="promisepay__headingtext">
+    <h1 id="promisepay__headingtext" class="promisepay__heading">Promise to Pay (Instalment)</h1>
     <div class="promisepay__list">
         <label class="promisepay__label">Current Balance</label>
         <input class="promisepay__input promisepay--readonly txt-aln--right promisepay--navtablinkfirst" type="text" readonly value="2,485.00" />
@@ -26,7 +26,10 @@
     </div>
     <div class="promisepay__list">
         <label class="promisepay__label">Instalment Date</label>
-        <input class="promisepay__input" type="date" value="15/01/2018" />
+        <input class="promisepay__input promisepay--datefield" type="text" value="15/01/2018" />
+        <span class="promisepay__calendar">
+            <img class="promisepay__caldrimg" src="../assets/images/calendar__icon.png" alt="Calendar Image" />
+        </span>
     </div>
     <div class="promisepay__list">
         <label class="promisepay__label">Review Date</label>
@@ -35,8 +38,8 @@
     <div class="clear"></div>
 </eds-card>
 <eds-card class="promisepay__btncont">
-    <button class="btn btn--ok">OK</button>
-    <button class="btn btn--cancel">Cancel</button>
+    <button class="btn btn--ok" onclick="switchParentTab('0')">OK</button>
+    <button class="btn btn--cancel" onclick="switchParentTab('0')">Cancel</button>
     <div class="promisepay__help">
         <img class="promisepay__helpimg" src="../assets/images/question__icon.png" alt="Help" />
     </div>

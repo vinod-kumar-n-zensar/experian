@@ -55,11 +55,13 @@ $eds-success: #cdf4d2;
   font-weight: normal !important;
   color: $color;
   }
-@mixin headerIcons($width, $height, $imgurl){
+@mixin headerIcons($width, $height){
 width: $width;
 height: $height;
 float: left;
-background: url($imgurl) no-repeat center center transparent; 
-background-size: 100%;
+}
+@mixin coverImage($imgurl){
+  background: url($imgurl) no-repeat center center transparent; 
+  background-size: 100%;
 }
 

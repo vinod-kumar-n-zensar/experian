@@ -26,7 +26,7 @@ module.exports = {
       rules:[
         {
             test: /\.(jpe?g|png|gif|svg)$/i, 
-            loader: "file-loader?name=/src/assets/images/[name].[ext]"
+            loader: "file-loader?name=src/assets/images/[name].[ext]"
         },
         {
             test: /\.(css|scss)?$/,
@@ -69,20 +69,6 @@ module.exports = {
         title: 'Experia',
         filename: 'acct-summary.html',
         template: 'acct-summary.html',
-        inject: false
-    }),
-    new HtmlWebpackPlugin({
-        hash: true,
-        title: 'Experia',
-        filename: 'contact-details.html',
-        template: 'contact-details.html',
-        inject: false
-    }),
-    new HtmlWebpackPlugin({
-        hash: true,
-        title: 'Experia',
-        filename: 'promise-pay.html',
-        template: 'promise-pay.html',
         inject: false
     }),
   ]

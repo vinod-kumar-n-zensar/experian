@@ -40,12 +40,15 @@
 		margin-bottom: 10px;
 		width: 100%;
     	float: left;
+		eds-dropdown .eds-dropdown-trigger{
+			font-size: 14px;
+		}
 	}
 	&__label{
 		@include fontStyling($family: 'Roboto-Regular', $size: 14px, $color: $btn-color);
 		min-width: 210px;
 		float: left;
-		padding-top: 5px;
+		padding-top: 7px;
 		position: relative;
 	}
 	&__required{
@@ -59,7 +62,7 @@
 	}
 	&__input{
 		border: solid 1px $lightGreyColor;
-		padding: 5px;
+		padding: 9px 5px;
 		background: $whiteColor;
 		width: 140px;
 		float: left;
@@ -97,6 +100,24 @@
 	}
 	&--selectedtab{
 		display: block;
+	}
+	&__calendar{
+		padding: 6px 15px 7px 15px;
+		background: #f6f6f6;
+		float: left;
+		vertical-align: middle;
+		border-radius: 0 4px 4px 0;
+		border: solid 1px #ccc;
+		border-left: none;
+	}
+	&--datefield{
+		border-radius: 4px 0 0 4px;
+	}
+	&__caldrimg{
+		vertical-align: middle;
+	}
+	&__output{
+		font-size: 14px;
 	}
 }
 .eds{

@@ -1,4 +1,4 @@
-<eds-tabs background="gray" class="eds">
+<eds-tabs background="gray" class="eds" role="complementary">
     <ul class="tab-labels style-scope eds-tabs" role="tablist">
         <li role="presentation" class="style-scope eds-tabs">
             <a href="javascript:void(0);" id="tab-activities" aria-selected="true" role="tab" class="style-scope eds-tabs">
@@ -7,26 +7,30 @@
         </li>
     </ul>
     <ul class="style-scope eds-tabs activity-tabs">
-        <li role="presentation" class="style-scope eds-tabs"><a id="tab-3" onclick="switchParentTab('3')" aria-controls="tab-panel-3" aria-selected="true" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">Promise to Pay</a></li>
-        <li role="presentation" class="style-scope eds-tabs memo-tab"><a id=" " aria-controls="Memo" aria-selected="false"
-                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Memo <span class="eds-accordion-caret"></span></a>
+        <li role="presentation" class="style-scope eds-tabs promisepay__link">
+            <a id="tab-3" onclick="switchParentTab('3')" aria-controls="tab-panel-3" aria-selected="true" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">
+                Promise to Pay
+            </a>
+        </li>
+        <li onclick="toggleMemo()" role="presentation" class="style-scope eds-tabs memo-tab bor-top--1 memodetail">
+            <a id=" " aria-controls="Memo" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">Memo <span class="eds-accordion-caret"></span></a>
             <ul>
                 <li>
-                    <a id=" " aria-controls="Memo" aria-selected="false" href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Standard
+                    <a id=" " aria-controls="Memo" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto">Standard
                         Memo</a>
                 </li>
                 <li>
-                    <a id=" " aria-controls="Memo" aria-selected="false" href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Important
+                    <a id=" " aria-controls="Memo" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto">Important
                         Memo</a>
                 </li>
             </ul>
         </li>
         <li role="presentation" class="style-scope eds-tabs"><a id=" " aria-controls="Move to Arrangement"
-                aria-selected="false" href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Move to Arrangement</a></li>
+                aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto">Move to Arrangement</a></li>
         <li role="presentation" class="style-scope eds-tabs"><a id=" " aria-controls="Referral" aria-selected="false"
-                href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Referral</a></li>
+                href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto">Referral</a></li>
         <li role="presentation" class="style-scope eds-tabs"><a id=" " aria-controls="Report Account Exceptions"
-                aria-selected="false" href="#tab-panel-1" role="tab" class="style-scope eds-tabs">Report Account
+                aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto">Report Account
                 Exceptions</a></li>
     </ul>
     <eds-tab label="Alerts" class="eds" aria-hidden="true" id="tab-panel-0" aria-labelledby="tab-0" role="tabpanel">
@@ -47,8 +51,8 @@
     </eds-tab>
 </eds-tabs>
 
-<section class="notes-tab">
-    <eds-accordion class="greyHeading eds marginBtm20" background="white" role="tablist">
+<section class="notes-tab" role="contentinfo">
+    <eds-accordion class="greyHeading eds marginBtm20 note-container" background="white" role="tablist">
         <eds-accordion-panel label="Notes" aria-expanded="false" expandedlabel="Notes" role="tab">
             <button class="eds-accordion-label">
                 <i class="api-icon-element material-icons style-scope eds-icon">speaker_notes</i>
@@ -60,7 +64,7 @@
         </eds-accordion-panel>
         <div class="table">
             <div class="row">
-                <div class="cell">
+                <div class="cell pad-top--8">
                     Last saved 02:05 pm
                 </div>
                 <div class="cell">

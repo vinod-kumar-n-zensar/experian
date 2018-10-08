@@ -1,20 +1,20 @@
 
             <div class="containerFlex">
-                <div class="containerSide">
+                <div class="containerSide" tabindex="0">
                     ${require('./profile-details.html')}
                     ${require('./collection-info.html')}
                     ${require('./customer-preference.html')}
                     ${require('./dca.html')}
                 </div>
                 <div class="containerMiddle">
-                    <div class="promisepay">
+                    <div class="promisepay" role="main">
                         <nav class="promisepay__navtab">
                             <ul class="promisepay__navtabcont">
                                 <li class="promisepay__navtablist">
-                                    <a onclick="switchTab('promiseAccountTab', 'promisepay--selectedtab', this)" class="promisepay__navtablink promisepay--navtablinkfirst" href="javascript:void(0);" title="Account">Account</a>
+                                    <a onclick="switchTab('promiseAccountTab', 'promisepay--selectedtab', this)" class="promisepay__navtablink promisepay--navtablinkfirst" href="javascript:void(0);" title="Account button showing account details">Account</a>
                                 </li>
                                 <li class="promisepay__navtablist">
-                                    <a onclick="switchTab('promiseActivityTab', 'promisepay--selectedtab', this)" class="promisepay__navtablink promisepay--navtablinklast promisepay--navtablinkactive" href="javascript:void(0);" title="Activity">Activity</a>
+                                    <a id="promiseActivity" onclick="switchTab('promiseActivityTab', 'promisepay--selectedtab', this)" class="promisepay__navtablink promisepay--navtablinklast promisepay--navtablinkactive" href="javascript:void(0);" title="Activity button showing activity details">Activity</a>
                                 </li>
                             </ul>
                         </nav>
@@ -24,12 +24,12 @@
                                 <header>
                                     <div>
                                         <eds-dropdown class="eds">
-                                            <label class="style-scope eds-dropdown"></label>
-                                            <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
-                                                <span class="eds-dropdown-value style-scope eds-dropdown">Account Summary</span>
-                                                <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
-                                                <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
-                                            </div>
+                                                <label for="containerMiddle__dropdown">Account summary Dropdown</label>
+                                                <select class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0" id="containerMiddle__dropdown" title="Dropdown - account summary selected"> 
+                                                    <option class="eds-dropdown-value style-scope eds-dropdown">Account Summary</option>
+                                                    <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                                                    <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                                                </select>
                                         </eds-dropdown>
                                     </div>
                                     <div>
@@ -149,7 +149,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="containerSide">
+                <div class="containerSide" id="promise__actsection">
                     ${require('./activites.html')}
                 </div>
             </div>

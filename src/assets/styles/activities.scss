@@ -68,17 +68,31 @@
        
     }
 }
-.memo-tab:hover{
+.memo-tab[active="true"]{
     .eds-accordion-caret{
         transform: rotate(180deg);
     }
-ul{
-    display: block;
-    li{
-        border-bottom: none;    
-    }
-    a{
-        font-weight: normal;
+    ul{
+        display: block;
+        li{
+            border-bottom: none;    
+        }
+        a{
+            font-weight: normal;
+        }
     }
 }
+.promisepay{
+    &__link{
+        margin-top: 10px!important;
+        padding-top: 7px!important;
+        padding-bottom: 7px!important;
+        border-bottom: none!important;
+        margin-bottom: 5px!important;
+    }
+    &--linkactive{
+        background: #fff;
+        border-left: solid 4px #d82b80;
+        padding-right: 12px!important;
+    }   
 }

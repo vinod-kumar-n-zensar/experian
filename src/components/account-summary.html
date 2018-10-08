@@ -3,7 +3,6 @@
 
     <eds-tabs class="eds">
         ${require('./eds-tabs.html')}
-
         <eds-tab aria-expanded="true" label="A1000056" class="eds accountsTabPanel" aria-hidden="false" id="tab-panel-0"
             aria-labelledby="tab-0" role="tabpanel" active="true">
             <div class="containerFlex marginTop20">
@@ -15,119 +14,118 @@
 
                 </div>
                 <div class="containerMiddle">
-                    <eds-card class="eds marginBtm46">
+                    <eds-card class="eds marginBtm46" tabindex="0">
                         <header>
                             <div>
                                 <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
-                                    <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
-                                        <span class="eds-dropdown-value style-scope eds-dropdown">Account Summary</span>
+                                    <label for="containerMiddle__dropdown">Account summary Dropdown</label>
+                                    <select class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0" id="containerMiddle__dropdown" title="Dropdown - account summary selected"> 
+                                        <option class="eds-dropdown-value style-scope eds-dropdown">Account Summary</option>
                                         <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
                                         <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
-                                    </div>
+                                    </select>
                                 </eds-dropdown>
                             </div>
                             <div>
 
                             </div>
                         </header>
-                        <main>
-                            <p>
-                            </p>
-                            <div class="table middle evenHighlight">
+                        <main role="main" tabindex="0">
+                            <div class="table middle evenHighlight" role="presentation">
                                 <div class="row">
                                     <div class="cell font-wt500">
                                     </div>
-                                    <div class="cell font-wt500">
+                                    <div class="cell font-wt500" role="heading" tabindex="0">
                                         Date
                                     </div>
-                                    <div class="cell font-wt500">
+                                    <div class="cell font-wt500" role="heading" tabindex="0">
                                         Code
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         Last Letter
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         16/02/2018
 
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         MR002
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         Last Letter 1
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         10/03/2018
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         MR001
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         Last Reg Ltr
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         21/03/2018
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         REG1
                                     </div>
                                 </div>
                                 <div class="row marginBtm20">
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         Returned Mail Flag
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         -
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         -
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         Last SMS
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         20/03/2018
 
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         OK
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         Last Dialler Call
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         19/03/2018
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         RPC
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         Last Dialler Call-1
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         12/03/2018
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         No answer
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         Next Action
                                     </div>
-                                    <div class="cell">
+                                    <div class="cell" tabindex="0">
                                         n/a
                                     </div>
                                     <div class="cell">
@@ -152,7 +150,7 @@
             role="tabpanel">
                 ${require('./contact-details.html')}
         </eds-tab>
-        <eds-tab aria-expanded="true" label="Promise To Pay" class="eds" aria-hidden="false" id="tab-panel-3"
+        <eds-tab aria-expanded="true" label="Promise To Pay" class="eds accountsTabPanel" aria-hidden="true" tabindex="-1" id="tab-panel-3"
             aria-labelledby="tab-3" role="tabpanel">
             ${require('./promise-pay.html')}
         </eds-tab>

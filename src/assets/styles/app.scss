@@ -66,46 +66,71 @@ body{
 	border: solid 1px $btnBorder;
 	@include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $whiteColor);
   	text-align: center;
-}
-.bor-left--{
-	&none{
-		border-left: none!important;
-	}
-}
-.mar-right{
-	&--none{
-		margin-right: 0!important;
-	}
-}
-.mar-top{
-	&--none{
-		margin-top: 0!important;
-	}
-}
-.mar-bot{
-	&--bot{
-		margin-bottom: 0!important;
-	}
-}
-.txt-aln{
-	&--right{
-		text-align: right!important;
-	}
-}
-.mar-tpbt{
-	&--20{
-		margin: 20px 0;
-	}
-}
-.btn{
+	cursor: pointer;
 	&--ok{
 		width: 45px!important;
-		margin-right: 10px;
+		margin-right: 5px;
 	}
 	&--cancel{
 		background: $whiteLightColor;
 		border: solid 1px $lightGreyColor;
 		color: $font-primary-color;
 		width: 80px;
+	}
+	&--viewall{
+		float: right;
+	    background: #f6f6f6;
+	    color: $blueFontColor;
+	    border: solid 1px rgba(0, 69, 144, 0.3);
+		cursor: auto;
+	}
+}
+.bor-left--{
+	&none{
+		border-left: none!important;
+	}
+}
+.mar{
+	&-top{
+		&--none{
+			margin-top: 0!important;
+		}
+	}
+	&-bot{
+		&--none{
+			margin-bottom: 0!important;
+		}
+	}
+	&-right{
+		&--none{
+			margin-right: 0!important;
+		}
+	}
+	&-tpbt{
+		&--20{
+			margin: 20px 0;
+		}
+	}
+}
+.txt{
+	&-aln{
+		&--right{
+			text-align: right!important;
+		}
+	}
+}
+.pad{
+	&-top{
+		&--10{
+			padding-top: 10px!important;
+		}
+		&--8{
+			padding-top: 8px!important;
+		}
+	}
+}
+.cur{
+	&--auto{
+		cursor: auto!important;
 	}
 }
