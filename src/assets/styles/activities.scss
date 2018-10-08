@@ -1,11 +1,12 @@
 $color_1: #426da9;
 $color_2: #b9b9b9;
+$color_3: #d8d8d8;
 $bg-color: #dcdcdc;
 $btn-color: #426da9;
 .activity-tabs{
     li{
         padding: 10px 15px;
-        border-bottom: 1px solid $color_2;
+        border-bottom: 1px solid $color_3;
     a{
         text-decoration: none;
         font-size: 14px;

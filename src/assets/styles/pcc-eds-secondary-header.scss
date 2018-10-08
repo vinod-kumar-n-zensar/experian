@@ -1,6 +1,7 @@
 @import 'variables.scss';
 eds-tabs {
 	display: block;
+	padding-left: 36px;
 	.tab-labels {
 		border-bottom: 1px solid #cccccc;
 		width: 100%;
@@ -46,12 +47,14 @@ eds-tabs {
 			display: table;
 		}
 	}
-	& [role="tabpanel"]{
-		padding-left: 36px;
-	}
 	eds-tab[active] {
 		display: block;
 		opacity: 1;
+	}
+	.containerSide{
+		eds-tabs{
+			padding: 0;
+		}
 	}
 }
 eds-tabs[vertical] {
