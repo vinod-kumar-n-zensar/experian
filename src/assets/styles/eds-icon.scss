@@ -80,7 +80,7 @@ eds-icon[border] {
 	margin-left:10px;
 	svg{
 		fill: $whiteColor;
-		vertical-align: bottom;
+		vertical-align: -webkit-baseline-middle;
 	}
  }
  .timer-icon{

@@ -52,6 +52,12 @@
         text-transform: capitalize;
         font-size: 14px;
      }
+     .row {
+        padding: 0 10px;
+        > .cell{
+        vertical-align: middle;
+     }
+    }
 }
 .memo-tab{
     ul{

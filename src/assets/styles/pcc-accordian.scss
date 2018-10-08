@@ -139,6 +139,9 @@ eds-accordion {
 	border: 1px solid $lightGreyColor;
 	border-radius: 6px;
 	background-color: $whiteColor;
+	&.data{
+		display: none;
+	}
 }
 eds-accordion[wide] {
 	border-radius: 0;
@@ -274,5 +277,8 @@ eds-accordion[wide="true"] {
 		.eds-accordion-label-text{
 			vertical-align: super;
 		}
+	}
+	.containerMiddle > eds-card{
+		padding: 20px 38px;
 	}
 }

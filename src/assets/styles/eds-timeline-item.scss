@@ -57,6 +57,7 @@ pcc-eds-timeline-item {
 		[slot="slot-header-right"]{
 			flex: 1;
 			font-size: 14px;
+			text-align: right;
 		}
 	}
 }
@@ -64,4 +65,7 @@ pcc-eds-timeline-item:last-child{
 	.section-icon{
 		border-left:0;
 	}
+}
+.pcc-eds-timeline-view{
+	padding: 0 50px 0 0;
 }
