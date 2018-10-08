@@ -55,3 +55,26 @@ $btn-color: #426da9;
         font-size: 14px;
      }
 }
+.memo-tab{
+    ul{
+        display: none;
+        li{
+            padding: 5px 10px;
+        }
+       
+    }
+}
+.memo-tab:hover{
+    .eds-accordion-caret{
+        transform: rotate(180deg);
+    }
+ul{
+    display: block;
+    li{
+        border-bottom: none;    
+    }
+    a{
+        font-weight: normal;
+    }
+}
+}

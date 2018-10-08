@@ -24,6 +24,9 @@ $switch-color: #888888;
 	padding: 10px;
 	height: 870px;
 	width: 300px;
+	&.left{
+		width: 330px;
+	}
 	&:last-child {
 		background-color: $background_color_1;
 		box-shadow: inset 4px 0 5px -4px rgba(0,0,0,0.4);
