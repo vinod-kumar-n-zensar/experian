@@ -4,17 +4,17 @@
     width: 100%;
 	&__innercont{
 	    width: 77%;
-    	margin: 35px auto 0 auto;
+    	margin: 50px auto 0 auto;
 	}
 	&__heading{
-		@include fontStyling($family: 'Roboto-Regular', $size: 15px, $color: $blackColor);
+		@include fontStyling($family: 'Roboto-Regular' !important, $size: 15px !important, $color: $blackColor);
 		line-height: 1.33;
 	}
 	&__callstats{
 		float: left;
-		width: 100px;
-	    margin: 40px 55px 30px;
-	    text-align: center;
+    	width: 130px;
+    	margin: 42px 46px 48px;
+    	text-align: center;
 	}
 	&__statcount{
 		@include fontStyling($family: 'Roboto-Medium', $size: 64px!important, $color: $statsColor);
@@ -22,12 +22,13 @@
 	  	position: relative;
 	}
 	&__statdesc{
-		@include fontStyling($family: 'Roboto-Regular', $size: 12px, $color: $statsDescColor);
+		@include fontStyling($family: 'Roboto', $size: 12px, $color: $statsDescColor);
 		text-transform: uppercase;
 		margin-top: 32px;
 		text-align: center;
     	width: 100%;
-    	line-height: 17px;
+		line-height: 17px;
+		font-weight: bold !important;
 	}
 	&__visuallyhidden{
 		border: 0;
@@ -57,11 +58,16 @@
 	  	border: solid 1px $lightGreyColor;
 	  	float: left;
     	padding: 20px 0;
-    	margin-bottom: 40px;
+    	margin-bottom: 52px;
 	}
 	&__form{
 		width: 70%;
 		margin: 0 auto;
+		.btn{
+			border: none;
+			padding: 7px 0;
+			font-family: Roboto !important;
+		}
 	}
 	&__input{
 		background-color: $whiteColor;
@@ -70,6 +76,10 @@
 	  	@include fontStyling($family: 'Roboto-Regular', $size: 16px, $color: $lightFontColor);
 	  	padding: 5px 0px 5px 10px;
 		margin-right: 10px;
-		width: 24%;
+		width: 239px;
+		&::-webkit-input-placeholder{
+			color: $lightFontColor;
+			font-weight:normal;
+		}
 	}
 }
