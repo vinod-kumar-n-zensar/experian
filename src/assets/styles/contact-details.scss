@@ -52,7 +52,7 @@
     }
     &__headtext{
         text-transform: uppercase;
-        color: $darkPurple;
+        color: $tab-heading-color;
         font-size: 14px;
         @include fontWeight($weight: 500);
     }

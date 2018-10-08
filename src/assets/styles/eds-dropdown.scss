@@ -1,12 +1,6 @@
-$color_1: #333333;
-$color_2: #b9b9b9;
-$color_3: white;
-$color_4: #888888;
+@import './variables.scss'; 
+
 $font_family_1: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$background_color_1: white;
-$background_color_2: #426da9;
-$border_color_1: #cccccc;
-$border_top_color_1: #cccccc;
 
 /*
  * These variables are available to all components globally and are thus designated with an "eds-" prefix.
@@ -29,7 +23,7 @@ eds-dropdown {
 		font-family: $font_family_1;
 		font-size: 16px;
 		font-weight: 400;
-		color: $color_1;
+		color: $font-primary-color;
 		font-size: 0.88rem;
 		font-weight: 500;
 		line-height: 1rem;
@@ -41,13 +35,13 @@ eds-dropdown {
 	.eds-dropdown-trigger {
 		position: relative;
 		display: block;
-		background-color: $background_color_1;
+		background-color: $whiteColor;
 		width: 100%;
 		box-sizing: border-box;
 		font-family: $font_family_1;
 		font-size: 16px;
 		font-weight: 400;
-		color: $color_1;
+		color: $font-primary-color;
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -60,7 +54,7 @@ eds-dropdown {
 		outline: none;
 		.eds-dropdown-placeholder {
 			display: none;
-			color: $color_2;
+			color: $eds-dropdown-placeholder-color;
 			font-weight: 400;
 		}
 		.eds-dropdown-placeholder.show {
@@ -109,7 +103,7 @@ eds-dropdown {
 		z-index: 1000;
 		top: calc(100% + 8px);
 		width: 100%;
-		background-color: $background_color_1;
+		background-color: $whiteColor;
 		border-radius: 4px;
 		border: 1px solid transparent;
 		border: 1px solid #d8d8d8;
@@ -162,7 +156,7 @@ eds-dropdown {
 				font-family: $font_family_1;
 				font-size: 16px;
 				font-weight: 400;
-				color: $color_1;
+				color: $font-primary-color;
 				box-sizing: border-box;
 			}
 		}
@@ -209,8 +203,8 @@ eds-dropdown {
 					}
 				}
 				&:hover {
-					background-color: $background_color_2;
-					color: $color_3;
+					background-color: $btn-color;
+					color: $whiteColor;
 				}
 				eds-checkbox {
 					position: absolute;
@@ -239,23 +233,23 @@ eds-dropdown.eds-dropdown-open {
 eds-dropdown[disabled] {
 	cursor: not-allowed;
 	.eds-dropdown-trigger {
-		border-color: $border_color_1;
-		color: $color_4;
+		border-color: $lightGreyColor;
+		color: $brownGreyColor;
 		&:focus {
-			border-color: $border_color_1;
-			color: $color_4;
+			border-color: $lightGreyColor;
+			color: $brownGreyColor;
 			&::after {
 				opacity: 0;
 			}
 			.eds-dropdown-arrow {
-				border-top-color: $border_top_color_1;
+				border-top-color: $lightGreyColor;
 			}
 		}
 		&::after {
 			opacity: 0;
 		}
 		.eds-dropdown-arrow {
-			border-top-color: $border_top_color_1;
+			border-top-color: $lightGreyColor;
 		}
 	}
 }

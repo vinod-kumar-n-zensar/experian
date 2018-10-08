@@ -1,7 +1,4 @@
-$color_1: #333333;
-$color_2: #e4002b;
-$color_3: #b35900;
-$color_4: #007A3B;
+@import './variables.scss';
 
 eds-tag {
 	display: inline-block;
@@ -11,25 +8,25 @@ eds-tag {
 	margin-left: 2px;
 	line-height: 1 !important;
 	&:not([motif]) {
-		background: #e6e6e6;
-		color: $color_1;
+		background: $eds-tag-color;
+		color: $font-primary-color;
 	}
 }
 eds-tag[motif="default"] {
-	background: #e6e6e6;
-	color: $color_1;
+	background: $eds-tag-color;
+	color: $font-primary-color;
 }
 eds-tag[motif='error'] {
-	background: #ffdce2;
-	color: $color_2;
+	background: $eds-error;
+	color: $alert-color;
 }
 eds-tag[motif='warning'] {
-	background: #fceeba;
-	color: $color_3;
+	background: $eds-warning;
+	color: $warning-color;
 }
 eds-tag[motif='success'] {
-	background: #cdf4d2;
-	color: $color_4;
+	background: $eds-success;
+	color: $success-color;
 	font-weight: normal;
 	text-transform: capitalize;
 }

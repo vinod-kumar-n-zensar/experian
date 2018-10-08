@@ -74,7 +74,7 @@ eds-icon[border] {
 .phone-icon{
 	width: 32px;
     height: 34px;
-    background: $frenchBlue;
+    background: $btn-color;
 	text-align: center;
 	border-radius: 3px;
 	margin-left:10px;
@@ -86,7 +86,7 @@ eds-icon[border] {
  .timer-icon{
 	 svg{
 		vertical-align: text-top;
-		fill: $veryLightPink;
+		fill: $eds-accordian-label-bg;
 	 }
 	 margin-right: 11.3px;
 

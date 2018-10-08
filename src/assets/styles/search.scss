@@ -40,7 +40,7 @@
   		width: 1px;	
 	}
 	&__percentage{
-		@include fontStyling($family: 'Roboto-Bold', $size: 18px, $color: $blackGreyColor);
+		@include fontStyling($family: 'Roboto-Bold', $size: 18px, $color: $font-primary-color);
 		line-height: 0.83;
 		position: absolute;
 	    bottom: -15px;

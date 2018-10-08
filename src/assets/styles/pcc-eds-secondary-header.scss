@@ -21,16 +21,16 @@ eds-tabs {
 				font-size: 14px;
 				font-weight: 500;
 				display: block;
-				color: $color_1;
+				color: $btn-color;
 				text-decoration: none;
 				&:hover {
 					border-bottom: 4px solid #d8d8d8;
-					color: $color_2;
+					color: $eds-tab-hover-color;
 				}
 			}
 			a[aria-selected="true"] {
-				border-bottom: 4px solid #e63888;
-				color: $color_3;
+				border-bottom: 4px solid $header-border-color;
+				color: $eds-tab-hover-color;
 			}
 		}
 	}
@@ -82,7 +82,7 @@ eds-tabs[vertical] {
 				}
 			}
 			a[aria-selected="true"] {
-				border-left: 4px solid #e63888;
+				border-left: 4px solid $header-border-color;
 				border-bottom: none;
 				padding-left: 16px;
 			}
@@ -115,7 +115,7 @@ eds-tabs[vertical] {
 					}
 				}
 				a[aria-selected="true"] {
-					border-left: 4px solid #e63888;
+					border-left: 4px solid $header-border-color;
 					border-bottom: none;
 					padding-left: 16px;
 				}

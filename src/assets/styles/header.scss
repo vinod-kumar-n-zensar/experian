@@ -16,7 +16,7 @@
 		@include headerIcons($width: 100%, $height: 100%, $imgurl: '../images/experian__logo.png');
 	}
 	&__logodesc{
-		@include fontStyling($family: 'Roboto-Regular', $size: 16px, $color: $blackGreyColor);
+		@include fontStyling($family: 'Roboto-Regular', $size: 16px, $color: $font-primary-color);
 		padding: 10px 0;
 		float: left;
 		text-decoration: none;
@@ -30,12 +30,12 @@
 	}
 	&__list{
 		float: left;
-		border-left: solid 1px $lightPinkColor;
+		border-left: solid 1px $eds-accordian-label-bg;
 		padding: 15px;
 	}
 	&__link{
 		float: left;
-		@include fontStyling($family: 'Roboto-Medium', $size: 16px, $color: $frenchBlue);
+		@include fontStyling($family: 'Roboto-Medium', $size: 16px, $color: $btn-color);
 		text-decoration: none;
 		position: relative;
 	}

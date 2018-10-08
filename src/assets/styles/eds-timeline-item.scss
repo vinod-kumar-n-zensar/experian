@@ -1,7 +1,5 @@
-$color_1: #333333;
-$color_2: #ffffff;
-$font_family_1: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$background_color_1: #af1685;
+@import './variables.scss';
+
 
 /*
  * These variables are available to all components globally and are thus designated with an "eds-" prefix.
@@ -15,7 +13,7 @@ pcc-eds-timeline-item {
 	font-family: $font_family_1;
 	font-size: 12px;
 	font-weight: 400;
-	color: $color_1;
+	color: $font-primary-color;
 	.flex-container {
 		display: flex;
 	}
@@ -23,15 +21,15 @@ pcc-eds-timeline-item {
 		flex: 1;
 	}
 	.section-icon {
-		border-left: 1px solid #d8d8d8;
+		border-left: 1px solid $activity-tab-color;
 		margin-left: 53px;
 		min-height: 100px;
 		padding-right: 30px;
 		text-align: center;
 		.icon-circle {
-			background-color: $background_color_1;
+			background-color: $barneyColor;
 			border-radius: 50%;
-			color: $color_2;
+			color: $whiteColor;
 			height: 40px;
 			line-height: 42px;
 			margin-left: -20px;

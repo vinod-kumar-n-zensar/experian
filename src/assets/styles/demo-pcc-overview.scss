@@ -1,11 +1,5 @@
-$color_1: #6d2077;
-$background_color_1: #f6f6f6;
+@import "../styles/variables.scss";
 $background_color_2: rgb(245, 245, 245);
-$background_color_3: #0e6eb7;
-$background_color_4: #f6f6f6;
-$border-color:#d8d8d8;
-$filter-bgcolor: #d2e8f9;
-$switch-color: #888888;
 
 .font-wt500{
 	font-weight: 500
@@ -41,7 +35,7 @@ $switch-color: #888888;
 		padding: 10px 0;
 	}
 	&:last-child {
-		background-color: $background_color_1;
+		background-color: $whiteLightColor;
 		padding:10px 0;
 	}
 	&:first-child {
@@ -105,13 +99,21 @@ eds-dropdown {
 		padding-left: 20px !important;
 		background-color: $background_color_2 !important;
 		text-transform: uppercase;
-		color: $color_1;
+		color: $tab-heading-color;
 	}
 }
 .table {
-	padding: 10px 20px;
+	padding: 10px 0;
 	display: block;
 	width: 100%;
+	.row{
+		padding: 0px 20px;
+	}
+}
+.even-style{
+	.row:nth-child(even){
+		background: $whiteLightColor;
+	}
 }
 .row {
 	display: block;
@@ -158,7 +160,7 @@ eds-accordion-panel[aria-expanded="false"] {
 	}
 }
 eds-icon.round-border {
-	background-color: $background_color_3;
+	background-color: $blueFontColor;
 	border-radius: 50%;
 	text-align: center;
 	width: 21px;
@@ -184,11 +186,11 @@ eds-option {
 }
 .evenHighlight{
 	.row:nth-child(even){
-		background: $background_color_4;
+		background: $whiteLightColor;
 	}
 }
 [slot="slot-header-center"]{
-	border-bottom:1px solid $border-color;
+	border-bottom:1px solid $activity-tab-color;
 	padding-bottom: 8px;
 }
 
@@ -204,7 +206,7 @@ eds-option {
    margin-right: .5rem;
 	width: 46px;
 	height: 26px;
-	background-color: $switch-color;
+	background-color: $brownGreyColor;
 	border-radius: 23px;
 	vertical-align: text-bottom;
 	transition: all 0.3s linear;
@@ -218,7 +220,7 @@ eds-option {
 	left: 0;
 	width: 42px;
 	height: 22px;
-	background-color:$background_color_1;
+	background-color:$whiteLightColor;
 	border-radius: 11px;
 	transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
 	transition: all 0.25s linear;
@@ -230,7 +232,7 @@ eds-option {
     left: 2px;
     width: 16px;
     height: 16px;
-    background-color:$switch-color;
+    background-color:$brownGreyColor;
     border-radius: 11px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
     transform: translate3d(2px, 2px, 0);
@@ -290,7 +292,7 @@ eds-option {
 		}
 		padding: 0;
 		.row {
-			border-bottom: 1px solid $border-color;
+			border-bottom: 1px solid $activity-tab-color;
 			padding: 10px 20px;
 		.cell{
 			

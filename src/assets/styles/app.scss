@@ -62,7 +62,7 @@ body{
 	width: 120px;
 	padding: 10px 0;
 	border-radius: 4px;
-	background-color: $frenchBlue;
+	background-color: $btn-color;
 	border: solid 1px $btnBorder;
 	@include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $whiteColor);
   	text-align: center;
@@ -105,7 +105,7 @@ body{
 	&--cancel{
 		background: $whiteLightColor;
 		border: solid 1px $lightGreyColor;
-		color: $blackGreyColor;
+		color: $font-primary-color;
 		width: 80px;
 	}
 }

@@ -1,28 +1,13 @@
-$color_1: #333333;
-$color_2: #426da9;
-$color_3: #163c6f;
-$color_4: #6d2077;
-$color_5: #1d4f91;
+@import './variables.scss';
 $font_family_1: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$background_color_1: #f6f6f6;
-$background_color_2: transparent;
-$background_color_3: #ffffff;
-$background_color_4: white;
 
-@keyframes "eds-spin" {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
+
 body.eds {
 	display: none;
 	font-family: $font_family_1;
 	font-size: 16px;
 	font-weight: 400;
-	color: $color_1;
+	color: $font-primary-color;
 	* {
 		box-sizing: border-box;
 		&::before {
@@ -43,64 +28,64 @@ body.eds.eds-show-body {
 	font-family: $font_family_1;
 	line-height: 1.4em;
 	a {
-		color: $color_2;
+		color: $btn-color;
 		&:hover {
-			color: $color_3;
+			color: $eds-tab-hover-color;
 		}
 	}
 	h1 {
-		color: $color_1;
+		color: $font-primary-color;
 		font-weight: 300;
 		line-height: 1.4em;
 		font-size: 30px;
 	}
 	h2 {
-		color: $color_1;
+		color: $font-primary-color;
 		font-weight: 300;
 		line-height: 1.4em;
 		font-size: 24px;
 	}
 	h3 {
-		color: $color_1;
+		color: $font-primary-color;
 		font-weight: bold;
 		font-size: 18px;
 	}
 	h4 {
-		color: $color_1;
+		color: $font-primary-color;
 		font-weight: bold;
 		font-size: 16px;
 	}
 	h5 {
-		color: $color_1;
+		color: $font-primary-color;
 		font-weight: bold;
 	}
 	h1[caps] {
 		text-transform: uppercase;
-		color: $color_4;
+		color: $tab-heading-color;
 		font-weight: 400;
 		font-size: 28px;
 	}
 	h2[caps] {
 		text-transform: uppercase;
-		color: $color_4;
+		color: $tab-heading-color;
 		font-weight: 400;
 		font-size: 22px;
 	}
 	h3[caps] {
 		text-transform: uppercase;
-		color: $color_4;
+		color: $tab-heading-color;
 		font-weight: 400;
 		font-size: 16px;
 	}
 	h4[caps] {
 		text-transform: uppercase;
-		color: $color_4;
+		color: $tab-heading-color;
 		font-weight: 400;
 		font-size: 14px;
 	}
 	h5[caps] {
 		text-transform: uppercase;
-		color: $color_4;
+		color: $tab-heading-color;
 		font-weight: 400;
 		font-size: 12px;
 	}
@@ -121,7 +106,7 @@ body.eds.eds-show-body {
 	}
 }
 [background='gray'] {
-	background-color: $background_color_1;
+	background-color: $whiteLightColor;
 }
 .no-scroll {
 	overflow: hidden;
@@ -182,21 +167,21 @@ eds-icon[border] {
 	display: flex;
 	align-items: center;
 	.icon-container {
-		background-color: $background_color_1;
+		background-color: $whiteLightColor;
 		line-height: 0;
 		.home-icon {
-			background-color: $background_color_2;
+			background-color: $transparent-color;
 			padding: 17px 23px;
 			margin: 0;
-			color: $color_2;
+			color: $btn-color;
 			cursor: pointer;
 			&:hover {
-				color: $color_5;
+				color: $icon-hover-color;
 			}
 		}
 		.home-icon.selected {
-			background-color: $background_color_3;
-			color: $color_1;
+			background-color: $whiteColor;
+			color: $font-primary-color;
 		}
 	}
 	.tabs-container {
@@ -208,7 +193,7 @@ eds-icon[border] {
 	}
 }
 pcc-eds-secondary-header-tab {
-	background-color: $background_color_1;
+	background-color: $whiteLightColor;
 	border-left: 1px solid #cccccc;
 	display: flex;
 	align-content: space-between;
@@ -223,7 +208,7 @@ pcc-eds-secondary-header-tab {
 		flex: 1;
 		display: flex;
 		align-items: center;
-		color: $color_2;
+		color: $btn-color;
 		eds-icon {
 			margin: 0;
 		}
@@ -246,13 +231,21 @@ pcc-eds-secondary-header-tab {
 			margin: 0 10px 0 5px;
 			padding: 8px;
 			cursor: default;
-			color: $color_2;
+			color: $btn-color;
 		}
 	}
 }
 pcc-eds-secondary-header-tab[active] {
-	background-color: $background_color_4;
+	background-color: $whiteColor;
 	.info-container {
-		color: $color_1;
+		color: $font-primary-color;
+	}
+}
+@keyframes "eds-spin" {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
 	}
 }
