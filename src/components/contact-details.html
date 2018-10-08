@@ -14,24 +14,22 @@
         </eds-tab>
         <eds-tab aria-expanded="true" label="Person Overview" class="eds" aria-hidden="false" id="tab-panel-0"
             aria-labelledby="tab-0" role="tabpanel" active="true">
-            <div class="containerFlex">
+            <div class="containerFlex marginTop20">
                 <div class="containerSide left">
                     ${require('./profile-details.html')}
-                    ${require('./collection-info.html')}
-                    ${require('./customer-preference.html')}
-                    ${require('./dca.html')}
+                    ${require('./contact-details-card.html')}
 
                 </div>
                 <div class="containerMiddle">
                     
     <div class="contactdetails__innercont">
         <div>
-            <h2 class="contactdetails__headertext">Contact Details</h2>
+            <h2 class="contactdetails__headertext font-wtnormal">Contact Details</h2>
             <button class="btn contactdetails__btn" value="Add">Add</button>
         </div>
     </div>
     <eds-card class="eds">
-        <div class="contactdetails__width">
+        <div class="contactdetails__width marginBtm20">
             <li class="contactdetails__list--display">
                 <a href="javascript:void(0);" title="Expandless icon" class="contactdetails__list--text">
                     <span class="contactdetails__eds-accordion-caret"></span>
@@ -74,7 +72,7 @@
 
         <div class="contactdetails__addressdetails">
             <div class="contactdetails__homeaddress">
-                <div class="contactdetails__addressheader">
+                <div class="contactdetails__addressheader ">
                     <span class="contactdetails__headtext">Home</span>
                     <div class="contactdetails__addressheader--displayinline">
                         <eds-tag motif="success" class="eds">Preferred</eds-tag>
@@ -84,7 +82,6 @@
                         <span class="contactdetails__edittext">Edit</span>
                     </a>
                 </div>
-                <hr>
                 <div class="contactdetails__address">
                     17 Jasper Close
                     <br> John Peace Road
@@ -105,7 +102,6 @@
                         <span class="contactdetails__edittext">Edit</span>
                     </a>
                 </div>
-                <hr>
                 <div class="contactdetails__address">
                     23 Brampton Street
                     <br> Peterson Way
@@ -128,11 +124,11 @@
         </div>
     </eds-card>
     <div class="contactdetails__closedaccordian">
-        <div class="contactdetails__addressheader">
+        <div class="contactdetails__addressheader pos-rel">
             <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
             <span class="contactdetails__headtext contactdetails__headertext--padding">Email addresses</span>
         </div>
-        <div class="contactdetails__addressheader">
+        <div class="contactdetails__addressheader pos-rel">
             <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
             <span class="contactdetails__headtext contactdetails__headertext--padding">phone numbers</span>
         </div>

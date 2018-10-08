@@ -30,4 +30,6 @@ eds-tag[motif='warning'] {
 eds-tag[motif='success'] {
 	background: #cdf4d2;
 	color: $color_4;
+	font-weight: normal;
+	text-transform: capitalize;
 }
