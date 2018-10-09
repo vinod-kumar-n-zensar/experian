@@ -73,7 +73,7 @@
         font-size: 14px;
         @include fontWeight($weight: 500);
     }
-    &eds-accordion-caret.contactdetails__accordian--rotate{
+    &__eds-accordion-caret.contactdetails__accordian--rotate{
         transform: rotate(0deg);
     }
     &__headertext--padding{

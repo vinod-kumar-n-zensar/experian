@@ -45,8 +45,10 @@ switchParentTab = (tabId, focusOnNotes) => {
 }
 
 setTabAria = (element, setProperty, setTabindex) => {
-	element.setAttribute("aria-hidden", setProperty);
-	element.setAttribute("tabindex", setTabindex);
+	if (element) {
+		element.setAttribute("aria-hidden", setProperty);
+		element.setAttribute("tabindex", setTabindex);
+	}
 }
 
 setAllElements = (elements, setProperty, setTabindex) => {
@@ -61,7 +63,7 @@ setAllElements = (elements, setProperty, setTabindex) => {
 getElement = (elementId, setProperty, setTabindex, element) => {
 	let activityElement = element || document.getElementById(elementId);
 		setTabAria(activityElement, setProperty, setTabindex);
-	if (activityElement.children.length) {
+	if (activityElement && activityElement.children && activityElement.children.length) {
 		setAllElements(activityElement.children, setProperty, setTabindex);
 	}
 }
@@ -73,22 +75,36 @@ let headerLogo = document.getElementById("header__logoid");
 let headerLogodesc = document.getElementById("header__logodescid");
 let headerRightLinks = document.querySelectorAll(".header__link");
 let property = (!page || page === "index.html") ? false : true;
-let tabindex = (!page || page === "index.html") ? 0 : -1;
-setTabAria(headerElement, property, tabindex);
-setTabAria(headerLogo, property, tabindex);
-setTabAria(headerLogodesc, property, tabindex);
+// let tabindex = (!page || page === "index.html") ? 0 : -1;
+let headerTabindex = (!page || page === "index.html") ? 1 : -1;
+setTabAria(headerElement, property, headerTabindex);
+setTabAria(headerLogo, property, headerTabindex);
+setTabAria(headerLogodesc, property, headerTabindex);
 getElement("profileActivities", true, -1);
 getElement("promise__actsection", true, -1);
 getElement("promiseProfile", true, -1);
 getElement("goHome", true, -1);
 // getElement("closeCase", true, -1);
 let accountsActivityElement = document.getElementById("accountsActivity");
-let accountsNotesElement = accountsActivityElement.children[1];
-getElement(accountsActivity, true, -1, accountsNotesElement);
+if (accountsActivityElement){
+	let accountsNotesElement = accountsActivityElement.children[1];
+	getElement("accountsActivity", true, -1, accountsNotesElement);
+}
+let profileElement = document.getElementById("profileContact");
+if (profileElement) {
+	let profileThirdElement = profileElement.children[2];
+	getElement("profileContact", true, -1, profileThirdElement);
+}
+// let profileFirstElement = profileElement.children[0];
+// getElement("profileContact", true, -1, profileFirstElement);
+// let accountElement = document.getElementById("accountContact");
+// let accountSecElement = accountElement.children[1];
+// getElement("accountContact", true, -1, accountSecElement);
+
 // getElement("tabNav", true, -1);
 
 for (element of headerRightLinks) {
-	setTabAria(element, property, tabindex);
+	setTabAria(element, property, headerTabindex);
 }
 
 toggleMemo = () =>{
@@ -111,4 +127,8 @@ toggleMemo = () =>{
 // 		let accountTabElement = document.getElementById("tab-0");
 // 			accountTabElement.focus();
 // 	}, 1);
+// }, true);
+
+// document.addEventListener('focus',function(e){
+// 	console.log(e);
 // }, true);

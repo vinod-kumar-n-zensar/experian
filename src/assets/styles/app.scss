@@ -125,6 +125,11 @@ body{
 			text-align: right!important;
 		}
 	}
+	&-ind{
+		&--hide{
+			text-indent: -99999em;
+		}
+	}
 }
 .pad{
 	&-top{

@@ -6,7 +6,7 @@
         <eds-tab aria-expanded="false" label="A1000056" class="eds accountsTabPanel" aria-hidden="false" id="tab-panel-0"
             aria-labelledby="tab-0" role="tabpanel">
             <div class="containerFlex marginTop20">
-                <div class="containerSide left">
+                <div class="containerSide left" id="accountContact">
                     ${require('./profile-details.html')}
                     ${require('./collection-info.html')}
                     ${require('./customer-preference.html')}
@@ -146,11 +146,11 @@
                 </div>
             </div>
         </eds-tab>
-        <eds-tab label="Profile" class="eds accountsTabPanel" id="tab-panel-1" aria-labelledby="tab-1" aria-hidden="true"
+        <eds-tab label="Profile" class="eds accountsTabPanel" id="tab-panel-1" aria-labelledby="tab-1" aria-hidden="false"
             role="tabpanel" active="true">
                 ${require('./contact-details.html')}
         </eds-tab>
-        <eds-tab aria-expanded="true" label="Promise To Pay" class="eds accountsTabPanel" aria-hidden="true" tabindex="-1" id="tab-panel-3"
+        <eds-tab aria-expanded="true" label="Promise To Pay" class="eds accountsTabPanel" aria-hidden="false" tabindex="-1" id="tab-panel-3"
             aria-labelledby="tab-3" role="tabpanel">
             ${require('./promise-pay.html')}
         </eds-tab>
