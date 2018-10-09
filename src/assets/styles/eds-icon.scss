@@ -94,6 +94,11 @@ eds-icon[border] {
 .eds-icon.time{
 	font-size: 12px;
 }
+.pcc-eds-timeline-view{
+	.section-icon .icon-circle{
+		padding-top: 3px;
+	}
+}
 @keyframes "eds-spin" {
 	from {
 		transform: rotate(0deg);
