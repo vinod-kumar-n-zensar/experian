@@ -98,7 +98,13 @@ eds-icon[border] {
 	.section-icon .icon-circle{
 		padding-top: 3px;
 	}
+	&.user-call-flow{
+		.section-icon .icon-circle{
+			padding-top: 0px;
+		}
+	}
 }
+
 @keyframes "eds-spin" {
 	from {
 		transform: rotate(0deg);
