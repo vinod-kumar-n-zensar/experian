@@ -48,6 +48,8 @@
         border-bottom: 1px solid $lightGreyColor;
         background-color: $whiteLightColor;
         border-radius: 6px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
     &__accordianlink{
         text-decoration: none;
