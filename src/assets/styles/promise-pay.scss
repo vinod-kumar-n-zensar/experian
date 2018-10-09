@@ -14,27 +14,32 @@
 		line-height: 10px;
 	}
 	&__navtablink{
-		border: solid 1px $navTabBgColor;
+		border: solid 1px $lightGreyColor;
 		text-decoration: none;
 		text-align: center;
-		@include fontStyling($family: 'Roboto-Medium', $size: 16px, $color: $btn-color);
+		@include fontStyling($family: 'Roboto', $size: 14px, $color: $btn-color);
 		min-width: 97px;
 	    float: left;
-	    padding: 10px 0;
+		padding: 10px 0;
+		font-weight: 500 !important;
 	}
 	&--navtablinkactive{
 		background: $navTabBgColor;
 		color: $whiteColor!important;
+		border: solid 1px $navTabBgColor;
 	}
 	&--navtablinkfirst{
 		border-radius: 4px 0 0 4px!important;
+		border-right: none;
 	}
 	&--navtablinklast{
 		border-radius: 0 4px 4px 0!important;
+		border-left: none;
 	}
 	&__heading{
-		@include fontStyling($family: 'Roboto-Regular', $size: 20px!important, $color: $blackColor);
-		margin-bottom: 25px;
+		@include fontStyling($family: 'Roboto', $size: 20px!important, $color: $blackColor);
+		margin-bottom: 48px;
+		font-weight: 300 !important;
 	}
 	&__list{
 		margin-bottom: 10px;
@@ -53,12 +58,12 @@
 	}
 	&__required{
 	    position: absolute;
-	    top: 3px;
+	    top: 8px;
 	    font-size: 14px;
 	    font-family: "Roboto-Regular";
 	    font-weight: normal;
 	    color: #426da9;
-	    left: -9px;
+	    left: -16px;
 	}
 	&__input{
 		border: solid 1px $lightGreyColor;
@@ -83,6 +88,10 @@
 		margin: 0!important;
 		border-radius: 0 0 4px 4px;
 		border-top: 0!important;
+		.btn--ok{
+			background-color: $promise-pay-activity-tab;
+			border: solid 1px $promise-pay-activity-tab;
+		}
 	}
 	&__help{
 		float: right;
@@ -102,7 +111,7 @@
 		display: block;
 	}
 	&__calendar{
-		padding: 6px 15px 7px 15px;
+		padding: 6px 20px 7px 20px;
 		background: #f6f6f6;
 		float: left;
 		vertical-align: middle;
@@ -124,5 +133,6 @@
 	&--promisecont{
 		margin-bottom: 0!important;
 		border-radius: 4px 4px 0 0;
+		padding: 33px 38px;
 	}
 }
