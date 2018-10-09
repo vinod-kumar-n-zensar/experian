@@ -10,7 +10,7 @@ switchTab = (documentId, selectedTabClassName, thisParam) => {
 	idElement.classList.add(selectedTabClassName);
 }
 
-switchParentTab = tabId => {
+switchParentTab = (tabId, focusOnNotes) => {
 	let tabElement = document.getElementById("tab-"+tabId);
 	let panelElement = document.getElementById("tab-panel-"+tabId);
 	let panelElements = document.getElementsByClassName("accountsTabPanel");
@@ -35,27 +35,34 @@ switchParentTab = tabId => {
 		document.getElementById("promiseActivity").click();
 		document.getElementById("promise__actsection").children[0].children[1].children[0].classList.add("promisepay--linkactive");
 	}
+	if (focusOnNotes) {
+		let accountsActivityElement = document.getElementById("accountsActivity");
+		let accountsNotesElement = accountsActivityElement.children[1];
+			getElement(accountsActivity, false, 0, accountsNotesElement);
+		let noteElement = document.getElementById("notes__text");
+			noteElement.focus();
+	}
 }
 
-setTabAria = (element, property, tabindex) => {
-	element.setAttribute("aria-hidden", property);
-	element.setAttribute("tabindex", tabindex);
+setTabAria = (element, setProperty, setTabindex) => {
+	element.setAttribute("aria-hidden", setProperty);
+	element.setAttribute("tabindex", setTabindex);
 }
 
-setAllElements = (elements) => {
+setAllElements = (elements, setProperty, setTabindex) => {
 	for (element of elements) {
 		setTabAria(element, true, -1);
 		if (element.children.length) {
-			setAllElements(element.children);
+			setAllElements(element.children, setProperty, setTabindex);
 		}
 	}
 }
 
-getElement = (elementId) => {
-	let activityElement = document.getElementById(elementId);
-		setTabAria(activityElement, true, -1);
+getElement = (elementId, setProperty, setTabindex, element) => {
+	let activityElement = element || document.getElementById(elementId);
+		setTabAria(activityElement, setProperty, setTabindex);
 	if (activityElement.children.length) {
-		setAllElements(activityElement.children);
+		setAllElements(activityElement.children, setProperty, setTabindex);
 	}
 }
 
@@ -65,14 +72,20 @@ let headerElement = document.getElementById("header");
 let headerLogo = document.getElementById("header__logoid");
 let headerLogodesc = document.getElementById("header__logodescid");
 let headerRightLinks = document.querySelectorAll(".header__link");
-let property = page === "index.html" ? false : true;
+let property = (!page || page === "index.html") ? false : true;
 let tabindex = (!page || page === "index.html") ? 0 : -1;
 setTabAria(headerElement, property, tabindex);
 setTabAria(headerLogo, property, tabindex);
 setTabAria(headerLogodesc, property, tabindex);
-getElement("profileActivities");
-getElement("promise__actsection");
-getElement("promiseProfile");
+getElement("profileActivities", true, -1);
+getElement("promise__actsection", true, -1);
+getElement("promiseProfile", true, -1);
+getElement("goHome", true, -1);
+// getElement("closeCase", true, -1);
+let accountsActivityElement = document.getElementById("accountsActivity");
+let accountsNotesElement = accountsActivityElement.children[1];
+getElement(accountsActivity, true, -1, accountsNotesElement);
+// getElement("tabNav", true, -1);
 
 for (element of headerRightLinks) {
 	setTabAria(element, property, tabindex);
@@ -85,3 +98,17 @@ toggleMemo = () =>{
 		element.setAttribute("active", activeValue);
 	}
 }
+
+// let contactPhoneElement = document.getElementById("contactPhone");
+// contactPhoneElement.addEventListener('focus',function(e){
+// 	getElement("tabNav", false, 0);
+// 	getElement("tab-0", false, 0);
+// 	getElement("tab-1", false, 0);
+// }, true);
+
+// contactPhoneElement.addEventListener('blur',function(e){
+// 	setTimeout(function(){
+// 		let accountTabElement = document.getElementById("tab-0");
+// 			accountTabElement.focus();
+// 	}, 1);
+// }, true);

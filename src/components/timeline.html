@@ -1,0 +1,203 @@
+<section tabindex="-1" aria-hidden="true">
+    <div class="sort-filter marginBtm30">
+        <div>
+            <label for="">Filter by</label>
+            <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
+                <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
+                    <span class="eds-dropdown-value style-scope eds-dropdown">All events</span>
+                    <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                    <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                </div>
+
+            </eds-dropdown>
+        </div>
+        <div class="all-users-dd">
+            <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
+                <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
+                    <span class="eds-dropdown-value style-scope eds-dropdown">All users</span>
+                    <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                    <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                </div>
+            </eds-dropdown>
+        </div>
+        <div class="sort-by-container">
+            <label for="eds-dropdownselect">Sort by</label>
+            <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
+                <div id="eds-dropdownselect" class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
+                    <span class="eds-dropdown-value style-scope eds-dropdown">Newest first</span>
+                    <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                    <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                </div>
+            </eds-dropdown>
+        </div>
+        <div>
+            <label class="form-switch">Expand all
+                <input type="checkbox">
+                <i></i> </label>
+        </div>
+    </div>
+</section>
+<pcc-eds-timeline-view class="eds" tabindex="-1" aria-hidden="true">
+    <div class="timeline-wrapper style-scope pcc-eds-timeline-view">
+        <div slot="timeline">
+            <pcc-eds-timeline-item icon="phone_callback" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">TODAY</div>
+                            <div>22/09/2017</div>
+                            <div>09:42</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                    New Authorised Party added - Mrs Brown
+                                    <div slot="slot-header-right">
+                                            <eds-icon icon="account_circle" class="s16 eds" library="material-icon-font"><i
+                                                    class="api-icon-element material-icons style-scope eds-icon eds-greyed"
+                                                    style="transform: scale(1.35);">account_circle</i></eds-icon>
+                                                    Adam Cross
+                                        </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="phone_missed" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">Today</div>
+                            <div>22/09/2017</div>
+                            <div>09:59</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                <div slot="slot-header-left">New Email Address added</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">3 days ago</div>
+                            <div>19/09/2017</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="phone_forwarded" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">phone_forwarded</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                <div slot="slot-header-left">Preffered contact method updated</div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">3 days ago</div>
+                            <div>19/09/2017</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="phone_forwarded" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">phone_forwarded</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                <div slot="slot-header-left">New Address added - Home</div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">4 days ago</div>
+                            <div>18/09/2017</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                    <div slot="slot-header-left">New Authorised Party added - DMC</div>
+                                    <div slot="slot-header-right">
+                                            <eds-icon icon="account_circle" class="s16 eds" library="material-icon-font"><i
+                                                    class="api-icon-element material-icons style-scope eds-icon eds-greyed"
+                                                    style="transform: scale(1.35);">account_circle</i></eds-icon>
+                                                    Becky Rose
+                                        </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">4 days ago</div>
+                            <div>18/09/2017</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                    New Email Address added
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+        </div>
+    </div>
+</pcc-eds-timeline-view>

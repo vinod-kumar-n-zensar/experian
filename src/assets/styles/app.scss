@@ -138,6 +138,25 @@ body{
 }
 .cur{
 	&--auto{
-		cursor: auto!important;
+		cursor: default!important;
 	}
+	&--pointer{
+		cursor: pointer!important;
+	}
+}
+.scroll {
+    overflow-y: scroll;
+}
+.scroll::-webkit-scrollbar {
+     width: 17.9px;
+}
+.scroll::-webkit-scrollbar-track {
+     -webkit-box-shadow: inset 0 0 2px $eds-accordian-label-bg; 
+}
+.scroll::-webkit-scrollbar-thumb {
+     -webkit-box-shadow: inset 0 0 2px $eds-accordian-label-bg; 
+     background: $eds-accordian-label-bg;
+     border: 4px solid transparent;
+     border-radius: 10px;
+     background-clip: content-box;
 }
