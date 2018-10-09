@@ -16,21 +16,21 @@
             <a id=" " aria-controls="Memo" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">Memo <span class="eds-accordion-caret"></span></a>
             <ul>
                 <li>
-                    <a id=" " aria-controls="Memo" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto">Standard
+                    <a id="" aria-controls="Memo" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Standard
                         Memo</a>
                 </li>
                 <li>
-                    <a id=" " aria-controls="Memo" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto">Important
+                    <a id=" " aria-controls="Memo" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Important
                         Memo</a>
                 </li>
             </ul>
         </li>
         <li role="presentation" class="style-scope eds-tabs"><a id=" " aria-controls="Move to Arrangement"
-                aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto">Move to Arrangement</a></li>
+                aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Move to Arrangement</a></li>
         <li role="presentation" class="style-scope eds-tabs"><a id=" " aria-controls="Referral" aria-selected="false"
-                href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto">Referral</a></li>
+                href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Referral</a></li>
         <li role="presentation" class="style-scope eds-tabs"><a id=" " aria-controls="Report Account Exceptions"
-                aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto">Report Account
+                aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Report Account
                 Exceptions</a></li>
     </ul>
     <eds-tab label="Alerts" class="eds" aria-hidden="true" id="tab-panel-0" aria-labelledby="tab-0" role="tabpanel">
@@ -52,7 +52,7 @@
 </eds-tabs>
 
 <section class="notes-tab" role="contentinfo">
-    <eds-accordion class="greyHeading eds marginBtm20 note-container" background="white" role="tablist">
+    <eds-accordion class="greyHeading eds marginBtm20 note-container" background="white" role="tablist" tabindex="0">
         <eds-accordion-panel label="Notes" aria-expanded="false" expandedlabel="Notes" role="tab">
             <button class="eds-accordion-label">
                 <i class="api-icon-element material-icons style-scope eds-icon">speaker_notes</i>
@@ -60,7 +60,7 @@
                 <span class="eds-accordion-label-text text-Cap"> Notes</span>
                 <span class="eds-accordion-caret"></span>
             </button>
-            <textarea name="" id="" cols="30" rows="19"></textarea>
+            <label for="notes__text" class="search__visuallyhidden">Enter text in notes</label><textarea name="" id="notes__text" cols="30" rows="19"></textarea>
         </eds-accordion-panel>
         <div class="table">
             <div class="row">
@@ -68,7 +68,7 @@
                     Last saved 02:05 pm
                 </div>
                 <div class="cell">
-                    <button class="note-btn">Save Note</button>
+                    <button aria-label="Click to save note" class="note-btn">Save Note</button>
                 </div>
             </div>
         </div>

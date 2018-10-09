@@ -2,10 +2,10 @@ switchTab = (documentId, selectedTabClassName, thisParam) => {
 	let idElement = document.getElementById(documentId);
 	let classElement = document.getElementsByClassName(selectedTabClassName);
 	let activeTabElement = document.getElementsByClassName("promisepay--navtablinkactive");
-	activeTabElement[0].setAttribute("aria-pressed", false);
+	activeTabElement[0].setAttribute("aria-selected", false);
 	activeTabElement[0].classList.remove("promisepay--navtablinkactive");
 	thisParam.classList.add("promisepay--navtablinkactive");
-	thisParam.setAttribute("aria-pressed", true);
+	thisParam.setAttribute("aria-selected", true);
 	classElement[0].classList.remove(selectedTabClassName);
 	idElement.classList.add(selectedTabClassName);
 }
@@ -39,10 +39,21 @@ switchParentTab = tabId => {
 let path = window.location.pathname;
 let page = path.split("/").pop();
 let headerElement = document.getElementById("header");
-let property = page === "index.html" ? true : false;
-let tabindex = page === "index.html" ? 0 : -1;
+let headerLogo = document.getElementById("header__logoid");
+let headerLogodesc = document.getElementById("header__logodescid");
+let headerRightLinks = document.querySelectorAll(".header__link");
+let property = page === "index.html" ? false : true;
+let tabindex = (!page || page === "index.html") ? 0 : -1;
 headerElement.setAttribute("aria-hidden", property);
 headerElement.setAttribute("tabindex", tabindex);
+headerLogo.setAttribute("tabindex", tabindex);
+headerLogo.setAttribute("aria-hidden", property);
+headerLogodesc.setAttribute("tabindex", tabindex);
+headerLogodesc.setAttribute("aria-hidden", property);
+for(element of headerRightLinks){
+element.setAttribute("tabindex", tabindex);
+element.setAttribute("aria-hidden", property);
+}
 
 toggleMemo = () =>{
 	let memoElement = document.getElementsByClassName("memodetail");

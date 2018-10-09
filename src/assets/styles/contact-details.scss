@@ -35,6 +35,7 @@
         @include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $blackColor);
         @include fontWeight($weight: 500);
         padding-left: 19px;
+        display: inline-block;
     }
     &__select--right{
         float: right;
@@ -48,8 +49,13 @@
         background-color: $whiteLightColor;
         border-radius: 6px;
     }
+    &__accordianlink{
+        text-decoration: none;
+    }
     &__edit{
         float: right;
+        border-style: none;
+        background-color: $whiteLightColor;
     }
     &__edittext{
         @include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $blueFontColor);
@@ -92,6 +98,7 @@
         transform: rotate(180deg);
         top: 20px;
         position: absolute;
+        margin-top: -3px;
     width: 12px;
     height: 8px;
     background-repeat: no-repeat;
@@ -147,6 +154,9 @@
     &__address{
         padding: 20px 15px 15px;
         @include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $blackColor);
+    }
+    &__address--padding0{
+        padding-bottom: 0px;
     }
     &__validity{
         @include fontStyling($family: 'Roboto-Medium', $size: 13px, $color: $brownGreyColor);

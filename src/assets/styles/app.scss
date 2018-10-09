@@ -85,9 +85,16 @@ body{
 		cursor: auto;
 	}
 }
-.bor-left--{
-	&none{
-		border-left: none!important;
+.bor{
+	&-left{
+		&--none{
+			border-left: none!important;
+		}
+	}
+	&-top{
+		&--1{
+			border-top: 1px solid $activity-tab-color;
+		}
 	}
 }
 .mar{
