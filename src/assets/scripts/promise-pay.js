@@ -9,6 +9,7 @@ switchTab = (documentId, selectedTabClassName, thisParam) => {
 	classElement[0].classList.remove(selectedTabClassName);
 	idElement.classList.add(selectedTabClassName);
 }
+
 switchParentTab = tabId => {
 	let tabElement = document.getElementById("tab-"+tabId);
 	let panelElement = document.getElementById("tab-panel-"+tabId);
@@ -36,6 +37,28 @@ switchParentTab = tabId => {
 	}
 }
 
+setTabAria = (element, property, tabindex) => {
+	element.setAttribute("aria-hidden", property);
+	element.setAttribute("tabindex", tabindex);
+}
+
+setAllElements = (elements) => {
+	for (element of elements) {
+		setTabAria(element, true, -1);
+		if (element.children.length) {
+			setAllElements(element.children);
+		}
+	}
+}
+
+getElement = (elementId) => {
+	let activityElement = document.getElementById(elementId);
+		setTabAria(activityElement, true, -1);
+	if (activityElement.children.length) {
+		setAllElements(activityElement.children);
+	}
+}
+
 let path = window.location.pathname;
 let page = path.split("/").pop();
 let headerElement = document.getElementById("header");
@@ -44,15 +67,15 @@ let headerLogodesc = document.getElementById("header__logodescid");
 let headerRightLinks = document.querySelectorAll(".header__link");
 let property = page === "index.html" ? false : true;
 let tabindex = (!page || page === "index.html") ? 0 : -1;
-headerElement.setAttribute("aria-hidden", property);
-headerElement.setAttribute("tabindex", tabindex);
-headerLogo.setAttribute("tabindex", tabindex);
-headerLogo.setAttribute("aria-hidden", property);
-headerLogodesc.setAttribute("tabindex", tabindex);
-headerLogodesc.setAttribute("aria-hidden", property);
-for(element of headerRightLinks){
-element.setAttribute("tabindex", tabindex);
-element.setAttribute("aria-hidden", property);
+setTabAria(headerElement, property, tabindex);
+setTabAria(headerLogo, property, tabindex);
+setTabAria(headerLogodesc, property, tabindex);
+getElement("profileActivities");
+getElement("promise__actsection");
+getElement("promiseProfile");
+
+for (element of headerRightLinks) {
+	setTabAria(element, property, tabindex);
 }
 
 toggleMemo = () =>{
