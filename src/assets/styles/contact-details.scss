@@ -15,6 +15,7 @@
         @include fontStyling($family: 'Roboto-Medium', $size: 20px, $color: $blackColor);
     }
     &__btn{
+        padding: 0;
         float: right;
         width: 134px;
         height: 34px;
