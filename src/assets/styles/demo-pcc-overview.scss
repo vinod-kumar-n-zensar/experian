@@ -195,6 +195,11 @@ eds-option {
 		background: $whiteLightColor;
 	}
 }
+.oddHighlight{
+	.row:nth-child(odd){
+		background: $whiteLightColor;
+	}
+}
 [slot="slot-header-center"]{
 	border-bottom:1px solid $activity-tab-color;
 	padding-bottom: 8px;
@@ -313,5 +318,20 @@ eds-option {
 	.row .cell{
 		text-align: left
 	}
+}
+}
+.table{
+	table{
+		width: 100%;
+		.row{
+			padding: 3px 12px;
+			margin-bottom: 3px;		
+			.cell{
+				padding: 0;
+			}				
+		}
+	}
+&.tabledata{
+	padding: 10px 19px;
 }
 }
