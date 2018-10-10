@@ -15,14 +15,14 @@
                     <eds-card class="eds marginBtm46" tabindex="0">
                         <header>
                             <div>
-                                    <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
-                                        <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
-                                            <span class="eds-dropdown-value style-scope eds-dropdown">Account Summary</span>
-                                            <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
-                                            <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
-                                        </div>
-                        
-                                    </eds-dropdown>
+                                <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
+                                    <label for="containerMiddle__dropdown">Account summary Dropdown</label>
+                                    <select class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0" id="containerMiddle__dropdown" title="Dropdown - account summary selected"> 
+                                        <option class="eds-dropdown-value style-scope eds-dropdown">Account Summary</option>
+                                        <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                                        <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                                    </select>
+                                </eds-dropdown>
                             </div>
                             <div>
 
@@ -36,10 +36,10 @@
                                             <td class="cell ">
 
                                             </td>
-                                            <td class="cell">        
+                                            <td aria-label="Date" class="cell" tabindex="0">        
                                                     Date
                                             </td>
-                                            <td class="cell">
+                                            <td aria-label="Code" class="cell" tabindex="0">
                                                     Code
                                             </td>
                                         </tr>
@@ -49,7 +49,7 @@
                                     </thead>
                                     <tbody class="oddHighlight">
                                         <tr class="row">
-                                                <td class="cell">
+                                                <td class="cell" tabindex="0">
                                                         Last Letter
                                                     </td>
                                                     <td class="cell" tabindex="0">
