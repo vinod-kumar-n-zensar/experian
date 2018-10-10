@@ -96,6 +96,11 @@ body{
 			border-top: 1px solid $activity-tab-color;
 		}
 	}
+	&-botrad{
+		&--ltrt{
+			border-radius: 0px 0px 6px 6px!important;
+		}
+	}
 }
 .mar{
 	&-top{

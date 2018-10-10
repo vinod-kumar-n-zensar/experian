@@ -1,128 +1,127 @@
 <section class="container acct-container clear">
-            <div class="containerFlex marginTop20">
-                <div class="containerSide left" id="profileContact">
-                    ${require('./profile-details.html')}
-                    ${require('./contact-details-card.html')}
-                </div>
-                <div class="containerMiddle">
-                    
-    <div class="contactdetails__innercont">
-        <div class="contactdetails__headerContainer">
-            <h2 class="contactdetails__headertext font-wtnormal" aria-label="Contact Details" role="heading" tabindex="0">Contact Details</h2>
-            <button class="btn contactdetails__btn cur--auto" value="Add" aria-label="Add address button">Add</button>
+    <div class="containerFlex marginTop20">
+        <div class="containerSide left" id="profileContact">
+            ${require('./profile-details.html')}
+            ${require('./contact-details-card.html')}
         </div>
-    </div>
-    <eds-card class="eds contactdetails__innereds" aria-expanded="true">
-        <div class="contactdetails__width marginBtm30">
-            <li class="contactdetails__list--display">
-                <a href="javascript:void(0);" title="Address link expanded" class="contactdetails__list--text">
-                    <span class="contactdetails__eds-accordion-caret active"></span>
-                    <h5 class="contactdetails__addresstext" title="Accordian heading">Addresses</h5>
-                </a>
-            </li>
-            <div class="contactdetails__list--display">
-                <eds-dropdown class="eds contactdetails__select--right">
-                    <label class="style-scope eds-dropdown" for="contactdetails__addressdropdown">Address combobox</label>
-                    <select id="contactdetails__addressdropdown" class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
-                        <option class="eds-dropdown-value style-scope eds-dropdown">Current</option>
-                        <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
-                        <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
-                    </select>
-                    <div class="helper-text style-scope eds-dropdown"></div>
-                    <div class="eds-dropdown-options style-scope eds-dropdown">
-                        <div class="eds-dropdown-searchbox style-scope eds-dropdown">
-                            <div class="eds-search-icon style-scope eds-dropdown">
-                                <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="style-scope eds-dropdown">
-                                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                                        class="style-scope eds-dropdown"></path>
-                                    <path d="M0 0h24v24H0z" fill="none" class="style-scope eds-dropdown"></path>
-                                </svg>
+        <div class="containerMiddle">
+            <div class="contactdetails__innercont">
+                <div class="contactdetails__headerContainer">
+                    <h2 class="contactdetails__headertext font-wtnormal" aria-label="Contact Details" role="heading" tabindex="0">Contact Details</h2>
+                    <button class="btn contactdetails__btn cur--auto" value="Add" aria-label="Add address button">Add</button>
+                </div>
+            </div>
+            <eds-card class="eds contactdetails__innereds" aria-expanded="true">
+                <div class="contactdetails__width marginBtm30">
+                    <li class="contactdetails__list--display">
+                        <a href="javascript:void(0);" title="Address link expanded" class="contactdetails__list--text">
+                            <span class="contactdetails__eds-accordion-caret active"></span>
+                            <h5 class="contactdetails__addresstext" title="Accordian heading">Addresses</h5>
+                        </a>
+                    </li>
+                    <div class="contactdetails__list--display">
+                        <eds-dropdown class="eds contactdetails__select--right">
+                            <label class="style-scope eds-dropdown" for="contactdetails__addressdropdown">Address combobox</label>
+                            <select id="contactdetails__addressdropdown" class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
+                                <option class="eds-dropdown-value style-scope eds-dropdown">Current</option>
+                                <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                                <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                            </select>
+                            <div class="helper-text style-scope eds-dropdown"></div>
+                            <div class="eds-dropdown-options style-scope eds-dropdown">
+                                <div class="eds-dropdown-searchbox style-scope eds-dropdown">
+                                    <div class="eds-search-icon style-scope eds-dropdown">
+                                        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="style-scope eds-dropdown">
+                                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                                                class="style-scope eds-dropdown"></path>
+                                            <path d="M0 0h24v24H0z" fill="none" class="style-scope eds-dropdown"></path>
+                                        </svg>
+                                    </div>
+                                    <input type="text" placeholder="Search" class="style-scope eds-dropdown">
+                                </div>
+                                <ul class="style-scope eds-dropdown">
+                                    <li tabindex="0" data-value="Current" class="style-scope eds-dropdown">Current
+                                    </li>
+                                </ul>
                             </div>
-                            <input type="text" placeholder="Search" class="style-scope eds-dropdown">
+                            <div class="slotted style-scope eds-dropdown">
+
+                                <eds-option selected="">Current</eds-option>
+
+                            </div>
+                        </eds-dropdown>
+                    </div>
+                </div>
+
+                <div class="contactdetails__addressdetails marginBtm20">
+                    <div class="contactdetails__homeaddress" role="tab" tabindex="0">
+                        <div class="contactdetails__addressheader ">
+                            <span class="contactdetails__headtext" aria-label="Home address details">Home</span>
+                            <div class="contactdetails__addressheader--displayinline">
+                                <eds-tag motif="success" class="eds" aria-label="Success text-preferred address">Preferred</eds-tag>
+                            </div>
+                            <button class="contactdetails__edit" tabindex="-1">
+                                <span class="contactdetails__edittext"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg> Edit</span>
+                            </button>
                         </div>
-                        <ul class="style-scope eds-dropdown">
-                            <li tabindex="0" data-value="Current" class="style-scope eds-dropdown">Current
-                            </li>
-                        </ul>
+                        <div class="contactdetails__address">
+                            <p>17 Jasper Close</p>
+                            <p> John Peace Road</p>
+                            <p>Nottingham</p>
+                            <p>NG5 2DU</p>
+                        </div>
+                        <p class="contactdetails__validity--padding">
+                            <span class="contactdetails__validity" title="Home address validity">Valid From</span>
+                            <span class="contactdetails__validity contactdetails__validity--font">18/05/2018</span>
+                        </p>
                     </div>
-                    <div class="slotted style-scope eds-dropdown">
+                    <div class="contactdetails__workaddress" role="tab" tabindex="0">
+                        <div class="contactdetails__addressheader">
+                            <span class="contactdetails__headtext" aria-label="Work address details">Work</span>
+                            <button class="contactdetails__edit" tabindex="-1">
+                                <span class="contactdetails__edittext"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg> Edit</span>
+                            </button>
+                        </div>
+                        <div class="contactdetails__address contactdetails__address--padding0">
+                            <p>23 Brampton </p>
+                            <p>Peterson </p>
+                            <p>Bookside</p>
+                            <p>St Anns</p>
+                            <p>Nottingham</p>
+                            <p>NG31 9LF</p>
+                            <br>
+                        </div>
+                        <p class="contactdetails__validity--padding15">
+                            <span class="contactdetails__validity" title="Home address validity">Valid From</span>
+                            <span class="contactdetails__validity--font">18/05/2018</span>
+                        </p>
 
-                        <eds-option selected="">Current</eds-option>
-
+                        <p class="contactdetails__validity--padding">
+                            <span class="contactdetails__validity">Valid To</span>
+                            <span class="contactdetails__validity--font">23/08/2018</span>
+                        </p>
                     </div>
-                </eds-dropdown>
+                </div>
+            </eds-card>
+            <div class="contactdetails__closedaccordian" aria-expanded="false">
+                <div class="contactdetails__addressheader pos-rel">
+                    <eds-accordion-panel>
+                    <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
+                    <a class="contactdetails__accordianlink cur--auto" href="javascript:void(0);" title="Email Address link collapsed"><span class="contactdetails__headtext contactdetails__headertext--padding" role="heading">Email addresses</span></a>
+                    </eds-accordion-panel>
+                </div>
+                <div class="contactdetails__addressheader pos-rel bor-botrad--ltrt" aria-expanded="false">
+                    <eds-accordion-panel>
+                    <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
+                    <a id="contactPhone" class="contactdetails__accordianlink cur--auto" href="javascript:void(0);" title="Phone numbers link collapsed"><span class="contactdetails__headtext contactdetails__headertext--padding" role="heading">phone numbers</span></a>
+                    </eds-accordion-panel>
+                </div>
             </div>
-        </div>
+            ${require('./timeline.html')}
 
-        <div class="contactdetails__addressdetails marginBtm20">
-            <div class="contactdetails__homeaddress" role="tab" tabindex="0">
-                <div class="contactdetails__addressheader ">
-                    <span class="contactdetails__headtext" aria-label="Home address details">Home</span>
-                    <div class="contactdetails__addressheader--displayinline">
-                        <eds-tag motif="success" class="eds" aria-label="Success text-preferred address">Preferred</eds-tag>
-                    </div>
-                    <button class="contactdetails__edit" tabindex="-1">
-                        <span class="contactdetails__edittext"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg> Edit</span>
-                    </button>
-                </div>
-                <div class="contactdetails__address">
-                    <p>17 Jasper Close</p>
-                    <p> John Peace Road</p>
-                     <p>Nottingham</p>
-                     <p>NG5 2DU</p>
-                </div>
-                <p class="contactdetails__validity--padding">
-                    <span class="contactdetails__validity" title="Home address validity">Valid From</span>
-                    <span class="contactdetails__validity contactdetails__validity--font">18/05/2018</span>
-                </p>
-            </div>
-            <div class="contactdetails__workaddress" role="tab" tabindex="0">
-                <div class="contactdetails__addressheader">
-                    <span class="contactdetails__headtext" aria-label="Work address details">Work</span>
-                    <button class="contactdetails__edit" tabindex="-1">
-                        <span class="contactdetails__edittext"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path></svg> Edit</span>
-                    </button>
-                </div>
-                <div class="contactdetails__address contactdetails__address--padding0">
-                    <p>23 Brampton </p>
-                    <p>Peterson </p>
-                    <p>Bookside</p>
-                    <p>St Anns</p>
-                    <p>Nottingham</p>
-                    <p>NG31 9LF</p>
-                    <br>
-                </div>
-                <p class="contactdetails__validity--padding15">
-                    <span class="contactdetails__validity" title="Home address validity">Valid From</span>
-                    <span class="contactdetails__validity--font">18/05/2018</span>
-                </p>
-
-                <p class="contactdetails__validity--padding">
-                    <span class="contactdetails__validity">Valid To</span>
-                    <span class="contactdetails__validity--font">23/08/2018</span>
-                </p>
-            </div>
         </div>
-    </eds-card>
-    <div class="contactdetails__closedaccordian" aria-expanded="false">
-        <div class="contactdetails__addressheader pos-rel">
-            <eds-accordion-panel>
-            <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
-            <a class="contactdetails__accordianlink cur--auto" href="javascript:void(0);" title="Email Address link collapsed"><span class="contactdetails__headtext contactdetails__headertext--padding" role="heading">Email addresses</span></a>
-            </eds-accordion-panel>
-        </div>
-        <div class="contactdetails__addressheader pos-rel" aria-expanded="false">
-            <eds-accordion-panel>
-            <span class="contactdetails__eds-accordion-caret contactdetails__accordian--rotate"></span>
-            <a id="contactPhone" class="contactdetails__accordianlink cur--auto" href="javascript:void(0);" title="Phone numbers link collapsed"><span class="contactdetails__headtext contactdetails__headertext--padding" role="heading">phone numbers</span></a>
-            </eds-accordion-panel>
+        <div class="containerSide" id="profileActivities">
+                ${require('./activites.html')}
         </div>
     </div>
-    ${require('./timeline.html')}
-
-                </div>
-                <div class="containerSide" id="profileActivities">
-                        ${require('./activites.html')}
-                </div>
-            </div>
 </section>

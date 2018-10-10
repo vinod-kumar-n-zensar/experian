@@ -123,3 +123,10 @@ eds-tabs[vertical] {
 		}
 	}
 }
+.account{
+	&__more{
+		position: absolute;
+		right: 0;
+		padding: 10px 15px;
+	}
+}

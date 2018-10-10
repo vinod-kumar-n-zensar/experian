@@ -166,6 +166,7 @@ eds-icon[border] {
 	background: #e6e6e6;
 	display: flex;
 	align-items: center;
+	position: relative;
 	.icon-container {
 		background-color: $whiteLightColor;
 		line-height: 0;
