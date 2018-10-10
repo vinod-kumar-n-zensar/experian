@@ -26,8 +26,12 @@
     margin-top: 385px;
     .eds-accordion-label{
         background:  $eds-accordian-label-bg !important;
-        svg{
-            vertical-align: bottom;
+        .notes-icon{
+            img{
+                vertical-align: bottom;
+                width:24px;
+                height: 24px;
+            }
         }
     }
     .greyHeading button{
