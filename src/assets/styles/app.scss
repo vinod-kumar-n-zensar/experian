@@ -194,3 +194,10 @@ body{
 		}
 	}
 }
+.skiplink {
+    position: absolute;
+	left: -9999em;
+	&:focus{
+		left: 0;
+	}
+}

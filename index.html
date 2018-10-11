@@ -9,10 +9,11 @@
 </head>
 <body class="eds eds-show-body">
     <div class="container">
+        <a tabindex="1" href="#dashboard__main" class="skiplink">Skip to main content</a>
         ${require('./src/components/header.html')} 
         <main id="dashboard__main">
-        ${require('./src/components/search.html')} 
-        ${require('./src/components/caseList.html')}
+            ${require('./src/components/search.html')} 
+            ${require('./src/components/caseList.html')}
         </main>
     </div>
     <script src=build/bundle.js></script>

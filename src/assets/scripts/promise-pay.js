@@ -83,7 +83,7 @@ setTabAria(headerLogodesc, property, headerTabindex);
 getElement("profileActivities", true, -1);
 getElement("promise__actsection", true, -1);
 getElement("promiseProfile", true, -1);
-getElement("goHome", true, -1);
+// getElement("goHome", true, -1);
 // getElement("closeCase", true, -1);
 let accountsActivityElement = document.getElementById("accountsActivity");
 if (accountsActivityElement){
