@@ -55,7 +55,7 @@ eds-accordion {
 			.edit-tab{
 				display: none;
 				svg{
-					vertical-align: bottom;
+					vertical-align: sub;
 					fill:$blueFontColor;
 				}
 			}
@@ -115,7 +115,7 @@ eds-accordion {
 		.eds-accordion-label {
 			background-color: $transparent-color;
 			border-bottom: 1px solid $lightGreyColor;
-			padding: 10px 20px;
+			padding: 10px 20px 7px 20px;
 			width: auto;
 			.eds-accordion-label-text {
 				&:nth-child(1) {
@@ -274,8 +274,11 @@ eds-accordion[wide="true"] {
 }
 .acct-container {
 	.eds-accordion-label{
+		i{
+			vertical-align: sub;
+		}
 		.eds-accordion-label-text{
-			vertical-align: super;
+			vertical-align: text-bottom;
 		}
 	}
 	.containerMiddle > eds-card{

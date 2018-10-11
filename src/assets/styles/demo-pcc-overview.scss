@@ -100,7 +100,7 @@ eds-dropdown {
 	min-width: 130px;
 }
 .greyHeading {
-	button {
+	button, h5 {
 		margin: 0 !important;
 		padding-left: 20px !important;
 		background-color: $background_color_2 !important;
@@ -177,7 +177,7 @@ eds-icon.round-border {
 		padding-top: 3px;
 	}
 }
-button.eds-accordion-label {
+button.eds-accordion-label,h5.eds-accordion-label  {
 	height: auto !important;
 }
 eds-option {
