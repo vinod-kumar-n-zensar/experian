@@ -55,8 +55,8 @@
 
 <section class="notes-tab" role="contentinfo">
     <eds-accordion class="greyHeading eds marginBtm20 note-container" background="white" role="tablist" tabindex="0">
-        <eds-accordion-panel label="Notes" aria-expanded="false" expandedlabel="Notes" role="tab">
-            <button class="eds-accordion-label cur--auto">
+        <eds-accordion-panel label="Notes" role="tab">
+            <button id="notesHeading" class="eds-accordion-label cur--auto">
                 <span class="notes-icon">
                     <img src="../assets/images/Notes-Icon.png" alt="Notes">
                 </span>
@@ -64,15 +64,16 @@
                 <span class="eds-accordion-label-text text-Cap"> Notes </span>
                 <!-- <span class="eds-accordion-caret"></span> -->
             </button>
-            <label for="notes__text" class="search__visuallyhidden">Enter text in notes</label><textarea class="scroll" name="" id="notes__text" cols="30" rows="19"></textarea>
+            <label for="notes__text" class="search__visuallyhidden textNote">Enter text in notes</label>
+            <textarea class="scroll" name="" id="notes__text" cols="30" rows="19"></textarea>
         </eds-accordion-panel>
         <div class="table">
             <div class="row">
-                <div class="cell pad-top--8">
+                <div aria-label="Last saved 02:05 pm" class="cell pad-top--8">
                     Last saved 02:05 pm
                 </div>
                 <div class="cell">
-                    <button aria-label="Click to save note" class="note-btn">Save Note</button>
+                    <button aria-label="Save Note" tabindex="0" aria-label="Click to save note" class="note-btn">Save Note</button>
                 </div>
             </div>
         </div>

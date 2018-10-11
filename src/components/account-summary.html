@@ -1,9 +1,8 @@
 <section class="container acct-container clear">
     ${require('./pcc-secondary-header.html')}
-    <eds-tabs class="eds">
+    <eds-tabs class="eds" id="account__main">
         ${require('./eds-tabs.html')}
-        <eds-tab aria-expanded="false" label="A1000056" class="eds accountsTabPanel" aria-hidden="false" id="tab-panel-0"
-            aria-labelledby="tab-0" role="tabpanel">
+        <eds-tab aria-label="A One Zero Zero Zero Zero Five Six case" aria-expanded="false" label="A1000056" class="eds accountsTabPanel" aria-hidden="false" id="tab-panel-0" aria-labelledby="tab-0" role="tabpanel">
             <main class="containerFlex marginTop20">
                 <div class="containerSide left" id="accountContact">
                     ${require('./profile-details.html')}
@@ -11,8 +10,8 @@
                     ${require('./customer-preference.html')}
                     ${require('./dca.html')}
                 </div>
-                <div class="containerMiddle">
-                    <eds-card class="eds marginBtm46" tabindex="0">
+                <div class="containerMiddle" aria-label="Account summary section containing account details in tabular format" tabindex="0">
+                    <eds-card class="eds marginBtm46">
                         <header>
                             <div>
                                 <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>

@@ -35,56 +35,48 @@ switchParentTab = (tabId, focusOnNotes) => {
 		document.getElementById("promiseActivity").click();
 		document.getElementById("promise__actsection").children[0].children[1].children[0].classList.add("promisepay--linkactive");
 	}
+	let accountsActivityElement = document.getElementById("accountsActivity");
 	if (focusOnNotes) {
-		let accountsActivityElement = document.getElementById("accountsActivity");
 		let accountsNotesElement = accountsActivityElement.children[1];
-			getElement(accountsActivity, false, 0, accountsNotesElement);
+		getElement("accountsActivity", false, 0, accountsNotesElement, true);
 		let noteElement = document.getElementById("notes__text");
 			noteElement.focus();
+	} else {
+		let accountsNotesElement = accountsActivityElement.children[1];
+		getElement("accountsActivity", true, -1, accountsNotesElement);
 	}
 }
 
-setTabAria = (element, setProperty, setTabindex) => {
-	if (element) {
+setTabAria = (element, setProperty, setTabindex, removeAttr) => {
+	if (element && !removeAttr) {
 		element.setAttribute("aria-hidden", setProperty);
 		element.setAttribute("tabindex", setTabindex);
+	} else if (element && removeAttr) {
+		element.removeAttribute("aria-hidden");
+		element.removeAttribute("tabindex");
 	}
 }
 
-setAllElements = (elements, setProperty, setTabindex) => {
+setAllElements = (elements, setProperty, setTabindex, removeAttr) => {
 	for (element of elements) {
-		setTabAria(element, true, -1);
+		setTabAria(element, setProperty, setTabindex, removeAttr);
 		if (element.children.length) {
-			setAllElements(element.children, setProperty, setTabindex);
+			setAllElements(element.children, setProperty, setTabindex, removeAttr);
 		}
 	}
 }
 
-getElement = (elementId, setProperty, setTabindex, element) => {
+getElement = (elementId, setProperty, setTabindex, element, removeAttr) => {
 	let activityElement = element || document.getElementById(elementId);
-		setTabAria(activityElement, setProperty, setTabindex);
+		setTabAria(activityElement, setProperty, setTabindex, removeAttr);
 	if (activityElement && activityElement.children && activityElement.children.length) {
-		setAllElements(activityElement.children, setProperty, setTabindex);
+		setAllElements(activityElement.children, setProperty, setTabindex, removeAttr);
 	}
 }
 
-let path = window.location.pathname;
-let page = path.split("/").pop();
-let headerElement = document.getElementById("header");
-let headerLogo = document.getElementById("header__logoid");
-let headerLogodesc = document.getElementById("header__logodescid");
-let headerRightLinks = document.querySelectorAll(".header__link");
-let property = (!page || page === "index.html") ? false : true;
-// let tabindex = (!page || page === "index.html") ? 0 : -1;
-let headerTabindex = (!page || page === "index.html") ? 1 : -1;
-setTabAria(headerElement, property, headerTabindex);
-setTabAria(headerLogo, property, headerTabindex);
-setTabAria(headerLogodesc, property, headerTabindex);
 getElement("profileActivities", true, -1);
 getElement("promise__actsection", true, -1);
 getElement("promiseProfile", true, -1);
-// getElement("goHome", true, -1);
-// getElement("closeCase", true, -1);
 let accountsActivityElement = document.getElementById("accountsActivity");
 if (accountsActivityElement){
 	let accountsNotesElement = accountsActivityElement.children[1];
@@ -94,17 +86,6 @@ let profileElement = document.getElementById("profileContact");
 if (profileElement) {
 	let profileThirdElement = profileElement.children[2];
 	getElement("profileContact", true, -1, profileThirdElement);
-}
-// let profileFirstElement = profileElement.children[0];
-// getElement("profileContact", true, -1, profileFirstElement);
-// let accountElement = document.getElementById("accountContact");
-// let accountSecElement = accountElement.children[1];
-// getElement("accountContact", true, -1, accountSecElement);
-
-// getElement("tabNav", true, -1);
-
-for (element of headerRightLinks) {
-	setTabAria(element, property, headerTabindex);
 }
 
 toggleMemo = () =>{
@@ -116,20 +97,20 @@ toggleMemo = () =>{
 	}
 }
 
-// let contactPhoneElement = document.getElementById("contactPhone");
-// contactPhoneElement.addEventListener('focus',function(e){
-// 	getElement("tabNav", false, 0);
-// 	getElement("tab-0", false, 0);
-// 	getElement("tab-1", false, 0);
-// }, true);
-
-// contactPhoneElement.addEventListener('blur',function(e){
-// 	setTimeout(function(){
-// 		let accountTabElement = document.getElementById("tab-0");
-// 			accountTabElement.focus();
-// 	}, 1);
-// }, true);
-
+document.getElementsByClassName("textNote")[1].removeAttribute("for");
+document.getElementsByClassName("textNote")[2].removeAttribute("for");
 // document.addEventListener('focus',function(e){
 // 	console.log(e);
 // }, true);
+addRemoveClass = (headingId, panelId) => {
+	let collectionElement = document.getElementById(headingId);
+	let collectionPanel = document.getElementById(panelId);
+	collectionElement.addEventListener('focus',function(e){
+		collectionPanel.classList.add("focus");
+	}, true);
+	collectionElement.addEventListener('blur',function(e){
+		collectionPanel.classList.remove("focus");
+	}, true);
+}
+addRemoveClass("accountFirstHeading", "accountFirstPanel");
+addRemoveClass("collectionHeading", "collectionPanel");
