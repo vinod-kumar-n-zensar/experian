@@ -8,20 +8,22 @@
     </ul>
     <ul class="style-scope eds-tabs activity-tabs">
         <li role="presentation" class="style-scope eds-tabs promisepay__link">
-            <a id="tab-3" onclick="switchParentTab('3')" aria-controls="tab-panel-3" aria-selected="true" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">
+            <a aria-selected="false" id="tab-3" onclick="switchParentTab('3')" aria-controls="tab-panel-3" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">
                 Promise to Pay
             </a>
         </li>
         <li onclick="toggleMemo()" role="presentation" class="style-scope eds-tabs memo-tab bor-top--1 memodetail">
-            <a id=" " aria-controls="Memo" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">Memo <span class="eds-accordion-caret"></span></a>
-            <ul>
+            <a id=" " aria-expanded="false" aria-controls="expandable" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">Memo <span class="eds-accordion-caret"></span></a>
+            <ul id="expandable">
                 <li>
-                    <a id="" aria-controls="Memo" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Standard
-                        Memo</a>
+                    <a id="" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">
+                        Standard Memo
+                    </a>
                 </li>
                 <li>
-                    <a id=" " aria-controls="Memo" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Important
-                        Memo</a>
+                    <a id=" " aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">
+                        Important Memo
+                    </a>
                 </li>
             </ul>
         </li>

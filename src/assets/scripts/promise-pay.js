@@ -112,6 +112,7 @@ toggleMemo = () =>{
 	for (element of memoElement){
 		let activeValue = element.getAttribute("active") == "true" ? false : true;
 		element.setAttribute("active", activeValue);
+		element.children[0].setAttribute("aria-expanded", activeValue);
 	}
 }
 

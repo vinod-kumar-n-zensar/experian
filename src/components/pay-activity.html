@@ -1,12 +1,12 @@
 <eds-card class="eds eds--promisecont" aria-describedby="promisepay__headingtext" role="form">
     <h1 id="promisepay__headingtext" class="promisepay__heading">Promise to Pay (Instalment)</h1>
     <div class="promisepay__list">
-        <label for="promisepay__inputid" class="promisepay__label">Current Balance</label>
+        <label tabindex="0" for="promisepay__inputid" class="promisepay__label">Current Balance</label>
         <input class="promisepay__input promisepay--readonly txt-aln--right promisepay--navtablinkfirst" id="promisepay__inputid" type="text" readonly value="2,485.00" />
         <input class="promisepay__input promisepay--readonly promisepay--navtablinklast bor-left--none" type="text" readonly value="GBP" />
     </div>
     <div class="promisepay__list">
-        <label class="promisepay__label" for="promisepay__requiredattr">
+        <label tabindex="0" class="promisepay__label" for="promisepay__requiredattr">
             Arrangement Amount
             <span class="promisepay__required" aria-required="true">*</span>
         </label>
@@ -14,7 +14,7 @@
         <input class="promisepay__input promisepay--readonly promisepay--smlwidth" type="text" readonly value="GBP" />
     </div>
     <div class="promisepay__list">
-        <label class="promisepay__label" for="promisepay__dropdown">Payment Type</label>
+        <label tabindex="0" class="promisepay__label" for="promisepay__dropdown">Payment Type</label>
         <eds-dropdown class="eds mar-top--none" id="promisepay__dropdown">
             <label class="style-scope eds-dropdown"></label>
             <select class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="0">
@@ -25,14 +25,14 @@
         </eds-dropdown>
     </div>
     <div class="promisepay__list">
-        <label class="promisepay__label" for="promisepay__date">Instalment Date</label>
+        <label tabindex="0" class="promisepay__label" for="promisepay__date">Instalment Date</label>
         <input class="promisepay__input promisepay--datefield" type="text" value="" />
         <span class="promisepay__calendar" id="promisepay__date">
             <button class="promisepay__calbutton"><img class="promisepay__caldrimg" src="../assets/images/calendar__icon.png" alt="Calendar Image" /></button>
         </span>
     </div>
     <div class="promisepay__list">
-        <label class="promisepay__label" for="promisepay__dateoutput" tabindex="0">Review Date</label>
+        <label tabindex="0" class="promisepay__label" for="promisepay__dateoutput" tabindex="0">Review Date</label>
         <p id="promisepay__dateoutput" class="promisepay__output" tabindex="0">02/10/2018</p>
     </div>
     <div class="clear"></div>
