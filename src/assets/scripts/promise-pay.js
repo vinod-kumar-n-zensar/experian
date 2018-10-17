@@ -97,8 +97,6 @@ toggleMemo = () =>{
 	}
 }
 
-document.getElementsByClassName("textNote")[1].removeAttribute("for");
-document.getElementsByClassName("textNote")[2].removeAttribute("for");
 // document.addEventListener('focus',function(e){
 // 	console.log(e);
 // }, true);
@@ -112,5 +110,11 @@ addRemoveClass = (headingId, panelId) => {
 		collectionPanel.classList.remove("focus");
 	}, true);
 }
-addRemoveClass("accountFirstHeading", "accountFirstPanel");
-addRemoveClass("collectionHeading", "collectionPanel");
+const path = window.location.pathname;
+const page = path.split("/").pop();
+if (page && page !== "index.html") {
+	document.getElementsByClassName("textNote")[1].removeAttribute("for");
+	document.getElementsByClassName("textNote")[2].removeAttribute("for");	
+	addRemoveClass("accountFirstHeading", "accountFirstPanel");
+	addRemoveClass("collectionHeading", "collectionPanel");
+}
