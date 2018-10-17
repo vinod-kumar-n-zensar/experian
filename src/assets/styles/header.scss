@@ -15,13 +15,36 @@
 		@include headerIcons($width: 100%, $height: 100%);
 		@include coverImage($imgurl: '../images/experian__logolatest.png');
 	}
+	&__dwplogo{
+		width: 94px;
+	    height: 49px;
+	    margin: 0 20px 0 15px;
+	    padding-right: 20px;
+	    float: left;
+	    border-left: solid 1px $lightGreyColor;
+	    border-right: solid 1px $lightGreyColor;
+	    padding-left: 20px;
+	    padding-top: 3px;
+	    padding-bottom: 3px;
+	}
+	&__dwplogolink{
+		text-indent: -99999em;
+		@include headerIcons($width: 100%, $height: 100%);
+		@include coverImage($imgurl: '../images/dwp-logo-transparent.png');
+	}
 	&__logodesc{
 		@include fontStyling($family: 'Roboto-Regular', $size: 16px, $color: $font-primary-color);
 		text-decoration: none;
-		padding: 3px 0 3px 20px;
+		padding: 3px 0 3px 0px;
 		float: left;
-		border-left: solid 1px $lightGreyColor;
+		// border-left: solid 1px $lightGreyColor;
 		margin-top: 15px;
+	}
+	&__divider{
+		width: 1px;
+		height: 55px;
+		float: left;
+		background: $lightGreyColor;
 	}
 	&__nav{
 		float: right;
