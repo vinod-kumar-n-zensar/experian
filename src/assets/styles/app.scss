@@ -204,3 +204,8 @@ body{
 .focus {
 	outline: -webkit-focus-ring-color auto 5px;
 }
+/**** IE 9+ styles*****/
+:root .btn--viewall { 
+	padding: 0\0!important;
+	margin-top: -2px\0;
+} 

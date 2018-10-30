@@ -1,4 +1,4 @@
-switchTab = (documentId, selectedTabClassName, thisParam) => {
+switchTab = function (documentId, selectedTabClassName, thisParam) {
 	let idElement = document.getElementById(documentId);
 	let classElement = document.getElementsByClassName(selectedTabClassName);
 	let activeTabElement = document.getElementsByClassName("promisepay--navtablinkactive");
@@ -10,22 +10,26 @@ switchTab = (documentId, selectedTabClassName, thisParam) => {
 	idElement.classList.add(selectedTabClassName);
 }
 
-switchParentTab = (tabId, focusOnNotes) => {
+switchParentTab = function (tabId, focusOnNotes) {
 	let tabElement = document.getElementById("tab-"+tabId);
 	let panelElement = document.getElementById("tab-panel-"+tabId);
 	let panelElements = document.getElementsByClassName("accountsTabPanel");
 	let tabElements = document.getElementsByClassName("accountsTab");
-	for (element of tabElements) {
-		if (tabId == 3 && element.id === "tab-0") {
+	for (let i = 0; i <= tabElements.length; i++) {
+		let element = tabElements[i];
+		if (tabId == 3 && element && element.id === "tab-0") {
 			element.setAttribute("aria-selected", true);
-		} else{
+		} else if (element) {
 			element.setAttribute("aria-selected", false);
 		}
 	}
-	for (element of panelElements) {
-		element.removeAttribute("active");
-		element.setAttribute("aria-hidden", true);
-		element.setAttribute("tabindex", "-1");
+	for (let i = 0; i <= panelElements.length; i++) {
+		let element = panelElements[i];
+		if (element) {
+			element.removeAttribute("active");
+			element.setAttribute("aria-hidden", true);
+			element.setAttribute("tabindex", "-1");
+		}
 	}
 	tabElement.setAttribute("aria-selected", true);
 	panelElement.setAttribute("active", true);
@@ -47,7 +51,7 @@ switchParentTab = (tabId, focusOnNotes) => {
 	}
 }
 
-setTabAria = (element, setProperty, setTabindex, removeAttr) => {
+setTabAria = function (element, setProperty, setTabindex, removeAttr) {
 	if (element && !removeAttr) {
 		element.setAttribute("aria-hidden", setProperty);
 		element.setAttribute("tabindex", setTabindex);
@@ -57,16 +61,17 @@ setTabAria = (element, setProperty, setTabindex, removeAttr) => {
 	}
 }
 
-setAllElements = (elements, setProperty, setTabindex, removeAttr) => {
-	for (element of elements) {
+setAllElements = function (elements, setProperty, setTabindex, removeAttr) {
+	for (let i = 0; i <= elements.length; i++) {
+		let element = elements[i];
 		setTabAria(element, setProperty, setTabindex, removeAttr);
-		if (element.children.length) {
+		if (element && element.children && element.children.length) {
 			setAllElements(element.children, setProperty, setTabindex, removeAttr);
 		}
 	}
 }
 
-getElement = (elementId, setProperty, setTabindex, element, removeAttr) => {
+getElement = function (elementId, setProperty, setTabindex, element, removeAttr) {
 	let activityElement = element || document.getElementById(elementId);
 		setTabAria(activityElement, setProperty, setTabindex, removeAttr);
 	if (activityElement && activityElement.children && activityElement.children.length) {
@@ -88,9 +93,10 @@ if (profileElement) {
 	getElement("profileContact", true, -1, profileThirdElement);
 }
 
-toggleMemo = () =>{
+toggleMemo = function () {
 	let memoElement = document.getElementsByClassName("memodetail");
-	for (element of memoElement){
+	for (let i = 0; i <= memoElement.length; i++){
+		let element = memoElement[i];
 		let activeValue = element.getAttribute("active") == "true" ? false : true;
 		element.setAttribute("active", activeValue);
 		element.children[0].setAttribute("aria-expanded", activeValue);
@@ -100,7 +106,7 @@ toggleMemo = () =>{
 // document.addEventListener('focus',function(e){
 // 	console.log(e);
 // }, true);
-addRemoveClass = (headingId, panelId) => {
+addRemoveClass = function (headingId, panelId) {
 	let collectionElement = document.getElementById(headingId);
 	let collectionPanel = document.getElementById(panelId);
 	collectionElement.addEventListener('focus',function(e){
