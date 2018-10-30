@@ -78,9 +78,12 @@ eds-icon[border] {
 	text-align: center;
 	border-radius: 3px;
 	margin-left:10px;
+	position: relative;
 	svg{
 		fill: $whiteColor;
-		vertical-align: -webkit-baseline-middle;
+		position: absolute;
+		top: 7px;
+		left: 7px;
 	}
  }
  .timer-icon{
