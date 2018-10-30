@@ -12,7 +12,15 @@
 	&__navtablist{
 		list-style: none;
 		line-height: 10px;
+		
 	}
+	@media all and (-ms-high-contrast:none)
+     {
+		&__navtablist{
+			list-style-image: url(data:0);
+			display: inline;
+		}
+     }
 	&__navtablink{
 		border: solid 1px $lightGreyColor;
 		text-decoration: none;

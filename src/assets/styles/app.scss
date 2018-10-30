@@ -29,9 +29,17 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
+ol, ul, ol li, ul li {
 	list-style: none;
 }
+@media all and (-ms-high-contrast:none)
+     {
+		ol, ul, ol li, ul li {
+			list-style: none;
+			list-style-image: url(data:0);
+		}
+     }
+
 blockquote, q {
 	quotes: none;
 }

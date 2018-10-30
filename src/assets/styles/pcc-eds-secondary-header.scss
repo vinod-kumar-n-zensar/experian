@@ -13,8 +13,7 @@ eds-tabs {
 			margin: 0;
 			padding: 0;
 			display: inline-block;
-			text-align: center;
-			line-height: 45px;
+			
 			a {
 				padding: 0 20px;
 				width: 100%;
@@ -32,7 +31,24 @@ eds-tabs {
 				border-bottom: 4px solid $header-border-color;
 				color: $eds-tab-hover-color;
 			}
+			
 		}
+		&:first-child{
+			height: auto;
+			li{
+				height: auto;
+			a{
+				padding: 11px 18px;
+			}
+			}
+			
+		} 
+		@media all and (-ms-high-contrast:none)
+     	{
+			&:first-child li{
+				
+			}
+     	}
 	}
 	eds-tab {
 		display: none;
