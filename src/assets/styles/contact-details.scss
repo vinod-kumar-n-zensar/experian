@@ -112,7 +112,7 @@
         margin-top:0 !important;
     }
     &__list--display{
-        display: unset;
+        display: inline;
     }
     &__innereds{
         padding: 20px 38px;
@@ -192,4 +192,15 @@
         display: block;
     }
     }
+}
+eds-dropdown .eds-dropdown-trigger{
+	background: url(../images/dropdown.PNG) no-repeat 160px; 
+    background-size: 18px 22px;
+}
+select::-ms-expand {
+    display: none;
+}
+select {
+    -moz-appearance: none;
+    text-overflow: '';
 }
