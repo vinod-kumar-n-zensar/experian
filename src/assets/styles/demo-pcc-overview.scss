@@ -54,6 +54,11 @@ $background_color_2: rgb(245, 245, 245);
 	padding-top: 15px;
 	flex: 0.95;
 	vertical-align: top;
+	@media all and (-ms-high-contrast:none)
+	 {
+		padding: 10px 40px;
+	 }
+	 
 	eds-card {
 		header {
 			border-bottom: 0;
@@ -61,7 +66,17 @@ $background_color_2: rgb(245, 245, 245);
 	}
 	eds-dropdown {
 		margin-top: 20px;
+	&.act-dd{
+		margin-top: 0px;
+		margin-bottom: 30px;
+		@media all and (-ms-high-contrast:none)
+	 {
+		margin-bottom: 0px;
+	 }
+		
 	}
+	}
+
 }
 .containerFlex {
 	display: flex;
