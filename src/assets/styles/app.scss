@@ -216,4 +216,50 @@ body{
 :root .btn--viewall { 
 	padding: 0\0!important;
 	margin-top: -2px\0;
-} 
+}
+:root .contactdetails__list--display a .contactdetails__eds-accordion-caret {
+    top: 12px\0;
+}
+:root .containerMiddle{
+	margin: 0 25px\0;
+}
+:root eds-card header{
+	margin-bottom: 0\0;
+	padding-bottom: 0\0;
+}
+:root .table.tabledata{
+	padding: 0\0;
+}
+:root .acct-container .containerMiddle > eds-card{
+	padding-bottom: 0\0;
+}
+:root #accountsActivity eds-tabs :first-child.tab-labels li{
+	margin-top: -2px\0;
+}
+:root #accountsActivity eds-tabs :first-child.tab-labels li a{
+	padding-top: 0\0;
+}
+:root #accountsActivity{
+	padding-top: 0\0;
+}
+:root #promise__actsection eds-tabs :first-child.tab-labels li{
+	margin-top: -2px\0;
+}
+:root #promise__actsection eds-tabs :first-child.tab-labels li a{
+	padding-top: 0\0;
+}
+:root #promise__actsection{
+	padding-top: 0\0;
+}
+:root .promisepay__navtab{
+	margin-top: 20px\0;
+}
+:root eds-accordion eds-accordion-panel .eds-accordion-label span{
+
+}
+:root .container{
+	overflow: hidden\0;
+}
+:root .acct-container{
+	height: 1250px\0;
+}
